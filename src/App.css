@@ -5,3 +5,8 @@
 a {
   text-decoration: none;
 }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #eee8e1;
+}

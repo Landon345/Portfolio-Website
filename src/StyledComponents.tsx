@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-//import PokeTheme from "../../PokeTheme";
+//import PokeTheme from ../../PokeTheme;
 
 export const NavbarLink = styled.div`
   text-decoration: none;
@@ -27,4 +27,28 @@ export const NavbarLink = styled.div`
   &:hover {
     background-color: #e9e9e9;
   }
+`;
+
+export const SidebarLink = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px 20px 20px;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    font-weight: bolder;
+    background-color: #e9e9e9;
+  }
+`;
+
+export const SidebarContainer = styled.div`
+  position: absolute;
+  height: 65vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 300px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 73px;
 `;

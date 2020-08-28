@@ -4,7 +4,11 @@ import { Box, Flex } from "@chakra-ui/core";
 import GitHubIcon from "src/assets/githubIcon.png";
 import linkedinIcon from "src/assets/linkedinIcon.png";
 import menuIcon from "src/assets/menuIcon.png";
-import { NavbarLink } from "src/StyledComponents";
+import {
+  NavbarLink,
+  SidebarLink,
+  SidebarContainer,
+} from "src/StyledComponents";
 import { Icon } from "@chakra-ui/core";
 
 function Navbar() {
@@ -69,15 +73,52 @@ function Navbar() {
             right="40px"
           >
             {sidebar ? (
-              <Box>
+              <Box cursor="pointer">
                 <Icon name="close" size="30px" />
               </Box>
             ) : (
-              <Box>
+              <Box cursor="pointer">
                 <img src={menuIcon} alt="menu" height="30px" />
               </Box>
             )}
           </Box>
+        )}
+
+        {sidebar && windowSize <= 860 && (
+          <>
+            <SidebarContainer>
+              <Box>
+                <Link to="/">
+                  <SidebarLink>Home</SidebarLink>
+                </Link>
+              </Box>
+              <Box>
+                <Link to="/projects">
+                  <SidebarLink>Projects</SidebarLink>
+                </Link>
+              </Box>
+
+              <Box>
+                <a href="https://github.com/Landon345" target="_blank">
+                  <SidebarLink>
+                    <Box>GitHub</Box>
+                    <img src={GitHubIcon} alt="Github" height="30px" />
+                  </SidebarLink>
+                </a>
+              </Box>
+              <Box>
+                <a
+                  href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
+                  target="_blank"
+                >
+                  <SidebarLink>
+                    <Box>LinkedIn</Box>
+                    <img src={linkedinIcon} alt="LinkedIn" height="30px" />
+                  </SidebarLink>
+                </a>
+              </Box>
+            </SidebarContainer>
+          </>
         )}
       </Flex>
     </>
