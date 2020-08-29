@@ -1,11 +1,12 @@
 import { theme } from "@chakra-ui/core";
 
-const portfolioTheme = {
+export const portfolioTheme = {
   ...theme,
   colors: {
     ...theme.colors,
 
     Background: "#eff0f3",
+    BackgroundHover: "#dee1e3f0",
     Headline: "#0d0d0d",
     Paragraph: "#2a2a2a",
     Button: "#ff8e3c",
@@ -17,19 +18,27 @@ const portfolioTheme = {
     Highlight: "#ff8e3c",
     Secondary: "#fffffe",
     Tertiary: "#d9376e",
-
-    DarkBackground: "#232946",
-    DarkHeadline: "#fffffe",
-    DarkParagraph: "#b8c1ec",
-    DarkButton: "#eebbc3",
-    DarkButtonText: "#232946",
-
-    DarkStroke: "#121629",
-    DarkMain: "#b8c1ec",
-    DarkHighlight: "#eebbc3",
-    DarkSecondary: "#fffffe",
-    DarkTertiary: "#eebbc3",
   },
 };
 
-export default portfolioTheme;
+export const darkPortfolioTheme = {
+  ...theme,
+  colors: {
+    ...theme.colors,
+    Background: "#232946",
+    BackgroundHover: "#232967f0",
+    Headline: "#fffffe",
+    Paragraph: "#b8c1ec",
+    Button: "#eebbc3",
+    ButtonHover: "#ddaab2",
+    ButtonText: "#232946",
+
+    Stroke: "#121629",
+    Main: "#b8c1ec",
+    Highlight: "#eebbc3",
+    Secondary: "#fffffe",
+    Tertiary: "#eebbc3",
+  },
+};
+
+//export default portfolioTheme;

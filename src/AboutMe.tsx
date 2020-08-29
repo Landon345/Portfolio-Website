@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "src/StyledComponents";
+
 import { motion } from "framer-motion";
-import { Box, Flex } from "@chakra-ui/core";
+import { Box, Flex, Grid } from "@chakra-ui/core";
+import StatsBar from "src/StatsBar";
 //import Resume from "src/assets/githubIcon.png";
 
 function AboutMe() {
@@ -10,21 +11,34 @@ function AboutMe() {
       <Box
         d="flex"
         justifyContent="center"
-        mt="10vh"
+        py="50px"
         fontSize="3.5rem"
         color="Headline"
       >
         Young Full Stack Developer
       </Box>
 
-      <Flex justifyContent="space-around" w="95%" mt="10vh">
-        <Flex justifyContent="center" w="100%">
-          <Box fontSize="2.5rem">Skills</Box>
-        </Flex>
-        <Flex justifyContent="center" w="100%">
-          <Box fontSize="2.5rem">Experience</Box>
-        </Flex>
-      </Flex>
+      <Grid
+        templateColumns="repeat(auto-fit, minmax(650px, 1fr))"
+        gap={6}
+        justifyItems="center"
+      >
+        <Box textAlign="center" width="100%">
+          <Box fontSize="2.5rem" color="Headline" py="30px">
+            Skills
+          </Box>
+          <StatsBar label="React" stat={95} />
+          <StatsBar label="React" stat={55} />
+          <StatsBar label="React" stat={25} />
+          <StatsBar label="React" stat={85} />
+          <StatsBar label="React" stat={65} />
+        </Box>
+        <Box>
+          <Box fontSize="2.5rem" color="Headline">
+            Experience
+          </Box>
+        </Box>
+      </Grid>
 
       <Box justifyContent="center" d="flex">
         {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
