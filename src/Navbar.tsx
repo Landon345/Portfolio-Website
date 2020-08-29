@@ -10,10 +10,15 @@ import {
   SidebarContainer,
 } from "src/StyledComponents";
 import { Icon } from "@chakra-ui/core";
+import { motion } from "framer-motion";
 
-function Navbar() {
+type NavbarProps = {
+  sidebar: boolean;
+  setSidebar: (sidebar: boolean) => void;
+};
+
+const Navbar: React.FC<NavbarProps> = ({ sidebar, setSidebar }) => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [sidebar, setSidebar] = useState(false);
 
   window.onresize = () => {
     setWindowSize(window.innerWidth);
@@ -42,7 +47,7 @@ function Navbar() {
             alignItems="center"
           >
             <Link to="/">
-              <NavbarLink>Home</NavbarLink>
+              <NavbarLink>About Me</NavbarLink>
             </Link>
             <Link to="/projects">
               <NavbarLink>Projects</NavbarLink>
@@ -84,45 +89,51 @@ function Navbar() {
           </Box>
         )}
 
-        {sidebar && windowSize <= 860 && (
+        {windowSize <= 860 && (
           <>
-            <SidebarContainer>
-              <Box>
-                <Link to="/">
-                  <SidebarLink>Home</SidebarLink>
-                </Link>
-              </Box>
-              <Box>
-                <Link to="/projects">
-                  <SidebarLink>Projects</SidebarLink>
-                </Link>
-              </Box>
+            <SidebarContainer open={sidebar}>
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Box>
+                  <Link to="/">
+                    <SidebarLink>About Me</SidebarLink>
+                  </Link>
+                </Box>
+                <Box>
+                  <Link to="/projects">
+                    <SidebarLink>Projects</SidebarLink>
+                  </Link>
+                </Box>
 
-              <Box>
-                <a href="https://github.com/Landon345" target="_blank">
-                  <SidebarLink>
-                    <Box>GitHub</Box>
-                    <img src={GitHubIcon} alt="Github" height="30px" />
-                  </SidebarLink>
-                </a>
-              </Box>
-              <Box>
-                <a
-                  href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
-                  target="_blank"
-                >
-                  <SidebarLink>
-                    <Box>LinkedIn</Box>
-                    <img src={linkedinIcon} alt="LinkedIn" height="30px" />
-                  </SidebarLink>
-                </a>
-              </Box>
+                <Box>
+                  <a href="https://github.com/Landon345" target="_blank">
+                    <SidebarLink>
+                      <Box>GitHub</Box>
+                      <img src={GitHubIcon} alt="Github" height="30px" />
+                    </SidebarLink>
+                  </a>
+                </Box>
+                <Box>
+                  <a
+                    href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
+                    target="_blank"
+                  >
+                    <SidebarLink>
+                      <Box>LinkedIn</Box>
+                      <img src={linkedinIcon} alt="LinkedIn" height="30px" />
+                    </SidebarLink>
+                  </a>
+                </Box>
+              </motion.div>
             </SidebarContainer>
           </>
         )}
       </Flex>
     </>
   );
-}
+};
 
-export default withRouter(Navbar);
+export default Navbar;

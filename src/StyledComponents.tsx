@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
-//import PokeTheme from ../../PokeTheme;
+import portfolioTheme from "src/portfolioTheme";
+
+type sidebarProps = {
+  open: boolean;
+};
 
 export const NavbarLink = styled.div`
   text-decoration: none;
@@ -42,7 +46,7 @@ export const SidebarLink = styled.div`
   }
 `;
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled("div")<sidebarProps>`
   position: absolute;
   height: 65vh;
   overflow-y: hidden;
@@ -51,4 +55,27 @@ export const SidebarContainer = styled.div`
   right: 0;
   background-color: rgba(255, 255, 255, 0.95);
   top: 73px;
+
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 1s ease-in-out;
+`;
+
+export const Button = styled.button`
+  background-color: ${portfolioTheme.colors["Button"]};
+  outline: none;
+  border: none;
+  color: ${portfolioTheme.colors["ButtonText"]};
+  padding: 10px 30px;
+  cursor: pointer;
+  border: 1px solid ${portfolioTheme.colors["ButtonText"]};
+  border-radius: 30px;
+  @media only screen and (max-width: 768px) {
+    padding: 5px 15px;
+  }
+  &:hover {
+    background-color: ${portfolioTheme.colors["ButtonHover"]};
+
+    transition: background-color 0.25s ease-in-out;
+    transition: color 0.15s ease-in-out;
+  }
 `;

@@ -9,6 +9,7 @@ const portfolioTheme = {
     Headline: "#0d0d0d",
     Paragraph: "#2a2a2a",
     Button: "#ff8e3c",
+    ButtonHover: "#ff7211",
     ButtonText: "#0d0d0d",
 
     Stroke: "#0d0d0d",
