@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { ThemeProvider } from "emotion-theming";
 import {
@@ -9,16 +9,28 @@ import {
 } from "react-router-dom";
 import { Box } from "@chakra-ui/core";
 import AboutMe from "src/AboutMe";
-import portfolioTheme from "src/portfolioTheme";
+import { darkPortfolioTheme, portfolioTheme } from "src/portfolioTheme";
 import Navbar from "src/Navbar";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
+  const [dark, setDark] = useState(localStorage.getItem("dark") || "null");
+
+  useEffect(() => {
+    localStorage.setItem("dark", dark);
+  }, [dark]);
   return (
     <Router>
-      <ThemeProvider theme={portfolioTheme}>
+      <ThemeProvider
+        theme={dark === "true" ? darkPortfolioTheme : portfolioTheme}
+      >
         <Box bg="Background" minH="100vh">
-          <Navbar sidebar={sidebar} setSidebar={setSidebar} />
+          <Navbar
+            sidebar={sidebar}
+            setSidebar={setSidebar}
+            setDark={setDark}
+            dark={dark}
+          />
           <hr />
           <Switch>
             <Route path="/" exact>

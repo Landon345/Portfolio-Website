@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { css } from "emotion";
 import { Box, Flex } from "@chakra-ui/core";
 import GitHubIcon from "src/assets/githubIcon.png";
 import linkedinIcon from "src/assets/linkedinIcon.png";
@@ -9,15 +10,22 @@ import {
   SidebarLink,
   SidebarContainer,
 } from "src/StyledComponents";
-import { Icon } from "@chakra-ui/core";
+import { Icon, Switch } from "@chakra-ui/core";
 import { motion } from "framer-motion";
 
 type NavbarProps = {
   sidebar: boolean;
   setSidebar: (sidebar: boolean) => void;
+  dark: string;
+  setDark: (dark: string) => void;
 };
 
-const Navbar: React.FC<NavbarProps> = ({ sidebar, setSidebar }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  sidebar,
+  setSidebar,
+  dark,
+  setDark,
+}) => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   window.onresize = () => {
@@ -26,48 +34,63 @@ const Navbar: React.FC<NavbarProps> = ({ sidebar, setSidebar }) => {
 
   return (
     <>
-      <Flex justifyContent="center" alignItems="center" py="10px" mx="10%">
-        <Box w="70%" d="flex">
+      <Flex justifyContent="center" alignItems="center" py="10px" mx="3%">
+        <Box w="20%" d="flex" alignItems="center" justifyContent="center">
+          <Box color="Headline" mr="10px">
+            Dark{" "}
+          </Box>
+          <Switch
+            size="md"
+            isChecked={dark == "true"}
+            onChange={() => setDark(dark === "true" ? "null" : "true")}
+          />
+        </Box>
+        <Box w="50%" d="flex" alignItems="center">
           <Link to="/">
             <Box
               color="Highlight"
               fontSize="45px"
               fontWeight="bold"
               fontFamily="TimesNewRoman"
+              className={css`
+                @media only screen and (max-width: 860px) {
+                  font-size: 40px;
+                }
+              `}
             >
               Landon Schlangen
             </Box>
           </Link>
         </Box>
         {windowSize > 860 && (
-          <Box
-            w="30%"
-            d="flex"
-            justifyContent="space-around"
-            alignItems="center"
-          >
-            <Link to="/">
-              <NavbarLink>About Me</NavbarLink>
-            </Link>
-            <Link to="/projects">
-              <NavbarLink>Projects</NavbarLink>
-            </Link>
-          </Box>
-        )}
+          <>
+            <Box
+              w="30%"
+              d="flex"
+              justifyContent="space-around"
+              alignItems="center"
+            >
+              <Link to="/">
+                <NavbarLink>About Me</NavbarLink>
+              </Link>
+              <Link to="/projects">
+                <NavbarLink>Projects</NavbarLink>
+              </Link>
+            </Box>
 
-        {windowSize > 860 && (
-          <Box d="flex">
-            <Box marginRight="10px">
-              <a href="https://github.com/Landon345" target="_blank">
-                <img src={GitHubIcon} alt="Github" height="30px" />
-              </a>
+            <Box d="flex">
+              <Box marginRight="10px">
+                <a href="https://github.com/Landon345" target="_blank">
+                  <img src={GitHubIcon} alt="Github" height="30px" />
+                </a>
+              </Box>
+              <Box>
+                <a href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/">
+                  <img src={linkedinIcon} alt="LinkedIn" height="30px" />
+                </a>
+              </Box>
             </Box>
-            <Box>
-              <a href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/">
-                <img src={linkedinIcon} alt="LinkedIn" height="30px" />
-              </a>
-            </Box>
-          </Box>
+          </>
         )}
 
         {windowSize <= 860 && (
