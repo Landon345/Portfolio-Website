@@ -20,7 +20,7 @@ const StatsBar: React.FC<StatsBarProps> = ({ label, stat }) => {
         <Box color="Paragraph">{label}</Box>
         <StatBarWhole>
           <StatBar width={stat}>
-            <Box ml="5px">{stat}/100</Box>
+            <Box ml="15px">{stat}/100</Box>
           </StatBar>
         </StatBarWhole>
       </SingleStatContainer>

@@ -8,9 +8,12 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Box } from "@chakra-ui/core";
+import { Hr } from "src/StyledComponents";
 import AboutMe from "src/AboutMe";
 import { darkPortfolioTheme, portfolioTheme } from "src/portfolioTheme";
 import Navbar from "src/Navbar";
+import Footer from "src/Footer";
+import Projects from "src/Projects";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -31,14 +34,20 @@ function App() {
             setDark={setDark}
             dark={dark}
           />
-          <hr />
+          <Hr />
           <Switch>
             <Route path="/" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
                 <AboutMe />
               </Box>
             </Route>
+            <Route path="/projects" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <Projects />
+              </Box>
+            </Route>
           </Switch>
+          <Footer />
         </Box>
       </ThemeProvider>
     </Router>

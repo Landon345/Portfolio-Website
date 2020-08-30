@@ -6,9 +6,11 @@ type Theme = {
     BackgroundHover: string;
     Headline: string;
     Paragraph: string;
+    LightParagraph: string;
     Button: string;
     ButtonHover: string;
     ButtonText: string;
+    Hr: string;
 
     Stroke: string;
     Main: string;

@@ -47,6 +47,7 @@ export const SidebarLink = styled.div`
   &:hover {
     font-weight: bolder;
     background-color: ${({ theme }) => theme.colors.Button};
+    transition: background-color 0.04s ease, font-weight 0.04s ease;
   }
 `;
 
@@ -96,6 +97,8 @@ export const SingleStatContainer = styled.div`
   grid-template-columns: 1fr 5fr;
   text-align: left;
   margin: 5px 5% 5px 100px;
+  padding: 20px 0px;
+  font-size: 30px;
   @media only screen and (max-width: 558px) {
     font-size: 13px;
   }
@@ -116,4 +119,15 @@ export const StatBar = styled.div<statbarProps>`
 export const StatBarWhole = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.BackgroundHover};
+  border-radius: 30px;
+`;
+
+export const Hr = styled.hr`
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.Hr};
+`;
+
+export const Image = styled.img`
+  object-fit: contain;
+  height: ${({ height }) => height};
 `;
