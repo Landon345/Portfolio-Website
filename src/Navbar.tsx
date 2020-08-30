@@ -5,6 +5,7 @@ import { Box, Flex } from "@chakra-ui/core";
 import GitHubIcon from "src/assets/githubIcon.png";
 import linkedinIcon from "src/assets/linkedinIcon.png";
 import menuIcon from "src/assets/menuIcon.png";
+import menuIcon2 from "src/assets/menuIcon2.png";
 import {
   NavbarLink,
   SidebarLink,
@@ -105,9 +106,17 @@ const Navbar: React.FC<NavbarProps> = ({
                 <Icon name="close" size="30px" />
               </Box>
             ) : (
-              <Box cursor="pointer">
-                <img src={menuIcon} alt="menu" height="30px" />
-              </Box>
+              <>
+                {dark === "true" ? (
+                  <Box cursor="pointer">
+                    <img src={menuIcon2} alt="menu" height="30px" />
+                  </Box>
+                ) : (
+                  <Box cursor="pointer">
+                    <img src={menuIcon} alt="menu" height="30px" />
+                  </Box>
+                )}
+              </>
             )}
           </Box>
         )}
