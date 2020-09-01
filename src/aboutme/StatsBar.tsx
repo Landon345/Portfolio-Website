@@ -1,10 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/core";
-import {
-  SingleStatContainer,
-  StatBar,
-  StatBarWhole,
-} from "src/StyledComponents";
+import { SingleStatContainer, StatBar, StatBarWhole } from "src/aboutme/Styles";
 
 import { motion } from "framer-motion";
 

@@ -6,11 +6,7 @@ import GitHubIcon from "src/assets/githubIcon.png";
 import linkedinIcon from "src/assets/linkedinIcon.png";
 import menuIcon from "src/assets/menuIcon.png";
 import menuIcon2 from "src/assets/menuIcon2.png";
-import {
-  NavbarLink,
-  SidebarLink,
-  SidebarContainer,
-} from "src/StyledComponents";
+import { NavbarLink, SidebarLink, SidebarContainer } from "src/navbar/Styles";
 import { Icon, Switch } from "@chakra-ui/core";
 import { motion } from "framer-motion";
 
