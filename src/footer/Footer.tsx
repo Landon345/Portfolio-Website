@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/core";
 import { Link } from "react-router-dom";
-import { Hr } from "src/StyledComponents";
+import { Hr } from "src/styled/StyledComponents";
 
 interface Props {}
 

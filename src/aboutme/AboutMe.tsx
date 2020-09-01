@@ -3,8 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Box, Flex, Grid } from "@chakra-ui/core";
 import BushelLogo from "src/assets/BushelLogo.png";
-import { Image } from "src/StyledComponents";
-import StatsBar from "src/StatsBar";
+import { Image } from "src/styled/StyledComponents";
+import StatsBar from "src/aboutme/StatsBar";
 //import Resume from "src/assets/githubIcon.png";
 
 function AboutMe() {

@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { css } from "emotion";
 import { Box, Flex } from "@chakra-ui/core";
-import GitHubIcon from "src/assets/githubIcon.png";
-import linkedinIcon from "src/assets/linkedinIcon.png";
-import menuIcon from "src/assets/menuIcon.png";
-import menuIcon2 from "src/assets/menuIcon2.png";
 import {
-  NavbarLink,
-  SidebarLink,
-  SidebarContainer,
-} from "src/StyledComponents";
+  GitHubIcon,
+  GitHubIcon3,
+  linkedinIcon,
+  menuIcon,
+  menuIcon2,
+} from "src/assets/pictures";
+import { NavbarLink, SidebarLink, SidebarContainer } from "src/navbar/Styles";
 import { Icon, Switch } from "@chakra-ui/core";
 import { motion } from "framer-motion";
 
@@ -41,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({
             Dark{" "}
           </Box>
           <Switch
-            size="md"
+            size="sm"
             isChecked={dark == "true"}
             onChange={() => setDark(dark === "true" ? "null" : "true")}
           />
@@ -81,12 +80,23 @@ const Navbar: React.FC<NavbarProps> = ({
 
             <Box d="flex">
               <Box marginRight="10px">
-                <a href="https://github.com/Landon345" target="_blank">
-                  <img src={GitHubIcon} alt="Github" height="30px" />
+                <a
+                  href="https://github.com/Landon345"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {dark === "true" ? (
+                    <img src={GitHubIcon3} alt="Github" height="30px" />
+                  ) : (
+                    <img src={GitHubIcon} alt="Github" height="30px" />
+                  )}
                 </a>
               </Box>
               <Box>
-                <a href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/">
+                <a
+                  href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
+                  rel="noopener noreferrer"
+                >
                   <img src={linkedinIcon} alt="LinkedIn" height="30px" />
                 </a>
               </Box>
@@ -103,7 +113,7 @@ const Navbar: React.FC<NavbarProps> = ({
           >
             {sidebar ? (
               <Box cursor="pointer">
-                <Icon name="close" size="30px" />
+                <Icon name="close" size="30px" color="Headline" />
               </Box>
             ) : (
               <>
@@ -141,10 +151,18 @@ const Navbar: React.FC<NavbarProps> = ({
                 </Box>
 
                 <Box>
-                  <a href="https://github.com/Landon345" target="_blank">
+                  <a
+                    href="https://github.com/Landon345"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <SidebarLink>
-                      <Box>GitHub</Box>
-                      <img src={GitHubIcon} alt="Github" height="30px" />
+                      <Box mr="10px">GitHub</Box>
+                      {dark === "true" ? (
+                        <img src={GitHubIcon3} alt="Github" height="30px" />
+                      ) : (
+                        <img src={GitHubIcon} alt="Github" height="30px" />
+                      )}
                     </SidebarLink>
                   </a>
                 </Box>
@@ -152,9 +170,10 @@ const Navbar: React.FC<NavbarProps> = ({
                   <a
                     href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <SidebarLink>
-                      <Box>LinkedIn</Box>
+                      <Box mr="10px">LinkedIn</Box>
                       <img src={linkedinIcon} alt="LinkedIn" height="30px" />
                     </SidebarLink>
                   </a>

@@ -8,12 +8,12 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Box } from "@chakra-ui/core";
-import { Hr } from "src/StyledComponents";
-import AboutMe from "src/AboutMe";
-import { darkPortfolioTheme, portfolioTheme } from "src/portfolioTheme";
-import Navbar from "src/Navbar";
-import Footer from "src/Footer";
-import Projects from "src/Projects";
+import { Hr } from "src/styled/StyledComponents";
+import AboutMe from "src/aboutme/AboutMe";
+import { darkPortfolioTheme, portfolioTheme } from "src/styled/portfolioTheme";
+import Navbar from "src/navbar/Navbar";
+import Footer from "src/footer/Footer";
+import Projects from "src/projects/Projects";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
