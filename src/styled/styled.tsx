@@ -11,6 +11,7 @@ type Theme = {
     ButtonHover: string;
     ButtonText: string;
     Hr: string;
+    ImageHover: string;
 
     Stroke: string;
     Main: string;

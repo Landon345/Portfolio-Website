@@ -55,6 +55,7 @@ export const SidebarContainer = styled("div")<sidebarProps>`
   right: 0;
   background-color: ${({ theme }) => theme.colors.BackgroundHover};
   top: 73px;
+  z-index: 100;
 
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   transition: transform 1s ease-in-out;
