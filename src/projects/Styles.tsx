@@ -18,6 +18,7 @@ export const OverlayContainer = styled.div`
   width: 100%;
   height: auto;
   background-color: white;
+  border: 1px solid ${({ theme }) => theme.colors.Paragraph};
   &:hover .overlay-hover {
     opacity: 1;
   }
@@ -57,10 +58,10 @@ export const OverlayA = styled.a`
 `;
 
 export const OverlayButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.Background};
+  background-color: ${({ theme }) => theme.colors.Button};
   outline: none;
   border: none;
-  color: ${({ theme }) => theme.colors.Headline};
+  color: ${({ theme }) => theme.colors.ButtonText};
   padding: 5px 20px;
   cursor: pointer;
   border: 1px solid ${({ theme }) => theme.colors.ButtonText};

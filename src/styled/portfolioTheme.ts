@@ -14,7 +14,7 @@ export const portfolioTheme = {
     ButtonHover: "#ff7211",
     ButtonText: "#0d0d0d",
     Hr: "#eee8e1",
-    ImageHover: "#eff0f390",
+    ImageHover: "#eff0f3b0",
 
     Stroke: "#0d0d0d",
     Main: "#eff0f3",
@@ -32,12 +32,12 @@ export const darkPortfolioTheme = {
     BackgroundHover: "#232967f0",
     Headline: "#fffffe",
     Paragraph: "#b8c1ec",
-    LightParagraph: "#435695",
+    LightParagraph: "#7386b5",
     Button: "#eebbc3",
     ButtonHover: "#ddaab2",
     ButtonText: "#232946",
     Hr: "#131946",
-    ImageHover: "#23294690",
+    ImageHover: "#232946b0",
 
     Stroke: "#121629",
     Main: "#b8c1ec",

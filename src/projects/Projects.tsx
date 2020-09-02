@@ -10,30 +10,19 @@ const Projects: React.FC = (props: Props) => {
   return (
     <>
       <Box mx="5%">
-        {/* <img src={photos.FirstPokemon} alt="" height="400px" />
-      <img src={photos.FirstPokemonDetail} alt="" height="400px" />
-      <img src={photos.FrontendPokemon} alt="" height="400px" />
-      <img src={photos.FrontendPokemonDetail} alt="" height="400px" />
-      <img src={photos.FrontendPokemonSearch} alt="" height="400px" />
-      <img src={photos.FullStackPokemon} alt="" height="400px" />
-      <img src={photos.FullStackPokemonCaptured} alt="" height="400px" />
-      <img src={photos.FullStackPokemonDetail} alt="" height="400px" />
-      <img src={photos.dealornodeal} alt="" height="400px" />
-      <img src={photos.covidTracker} alt="" height="400px" />
-      <img src={photos.cookieclicker} alt="" height="400px" />
-      <img src={photos.youTube} alt="" height="400px" />
-      <img src={photos.tinder} alt="" height="400px" />
-      <img src={photos.tabsystem} alt="" height="400px" />
-      <img src={photos.tabsystemTabs} alt="" height="400px" />
-      <img src={photos.tabsystemMyTabs} alt="" height="400px" />
-      <img src={photos.netflix} alt="" height="400px" />
-      <img src={photos.instagram} alt="" height="400px" />
-      <img src={photos.amazon} alt="" height="400px" />
-    <img src={photos.GraphqlResume} alt="" height="400px" /> */}
-
         {/* Featured */}
-        <Box fontSize="40px" color="Headline" mt="60px">
-          Featured
+        <Box d="flex" justifyContent="space-between">
+          <Box fontSize="40px" color="Headline" mt="60px">
+            Featured
+          </Box>
+          <Box
+            fontSize="20px"
+            color="LightParagraph"
+            mt="60px"
+            alignSelf="flex-end"
+          >
+            Click on a photo to see more photos
+          </Box>
         </Box>
         <Grid
           templateColumns="repeat(auto-fit, minmax(400px, 1fr))"
@@ -42,17 +31,27 @@ const Projects: React.FC = (props: Props) => {
           mt="30px"
         >
           <Project
-            image={photos.FullStackPokemon}
+            images={[
+              photos.FullStackPokemonCover,
+              photos.FullStackPokemon,
+              photos.FullStackPokemonCaptured,
+              photos.FullStackPokemonDetail,
+            ]}
             title="Full Stack Pokemon"
             github="https://github.com/Landon345/FullStack-Pokemon"
           />
           <Project
-            image={photos.tabsystem}
+            images={[
+              photos.tabsystemCover,
+              photos.tabsystem,
+              photos.tabsystemTabs,
+              photos.tabsystemMyTabs,
+            ]}
             title="tab system"
             github="https://github.com/Landon345/Tabsystem"
           />
           <Project
-            image={photos.TradingPractice}
+            images={[photos.TradingPractice]}
             title="Trading Practice"
             github="https://github.com/Landon345/Landon345-TradingPractice"
             video="https://drive.google.com/file/d/1w0nsRuOq1uYGyq_UrIHI6YC2jQG2MPTb/view?usp=sharing"
@@ -74,29 +73,43 @@ const Projects: React.FC = (props: Props) => {
           mt="30px"
         >
           <Project
-            image={photos.dealornodeal}
+            images={[photos.dealornodealCover, photos.dealornodeal]}
             title="deal-or-no-deal"
             github="https://github.com/Landon345/Deal-or-no-deal-game"
             hosted="https://landon345.github.io/Deal-or-no-deal-game/"
           />
           <Project
-            image={photos.FirstPokemon}
+            images={[
+              photos.FirstPokemonCover,
+              photos.FirstPokemon,
+              photos.FirstPokemonDetail,
+            ]}
             title="First Pokemon"
             github="https://github.com/Landon345/Pokemon-FrontEndWebProject"
           />
           <Project
-            image={photos.cookieclicker}
+            images={[photos.CookieClickerCover, photos.cookieclicker]}
             title="cookie clicker game"
             github="https://github.com/Landon345/CookieClickerGame"
             hosted="https://landon345.github.io/CookieClickerGame/"
           />
           <Project
-            image={photos.FrontendPokemon}
+            images={[
+              photos.FrontendPokemonCover,
+              photos.FrontendPokemon,
+              photos.FrontendPokemonSearch,
+              photos.FrontendPokemonDetail,
+            ]}
             title="Frontend Pokemon"
             github="https://github.com/Landon345/Frontend-Pokemon"
           />
           <Project
-            image={photos.FullStackPokemon}
+            images={[
+              photos.FullStackPokemonCover,
+              photos.FullStackPokemon,
+              photos.FullStackPokemonCaptured,
+              photos.FullStackPokemonDetail,
+            ]}
             title="Full stack pokemon"
             github="https://github.com/Landon345/FullStack-Pokemon"
           />
@@ -118,34 +131,40 @@ const Projects: React.FC = (props: Props) => {
           mt="30px"
         >
           <Project
-            image={photos.instagram}
+            images={[photos.instagramCover, photos.instagram]}
             title="Instagram clone"
             github="https://github.com/Landon345/instagram-clone"
             hosted="https://instagram-clone-3b95e.web.app/"
           />
           <Project
-            image={photos.netflix}
+            images={[photos.netflixCover, photos.netflix]}
             title="Netflix clone"
             github="https://github.com/Landon345/netflix-clone"
             hosted="https://netflix-clone-78d6c.web.app/"
           />
           <Project
-            image={photos.amazon}
+            images={[photos.amazonCover, photos.amazon]}
             title="Amazon clone"
             github="https://github.com/Landon345/amazon-clone"
             hosted="https://clone-f7d52.web.app"
           />
           <Project
-            image={photos.tinder}
+            images={[photos.tinderCover, photos.tinder]}
             title="Tinder clone"
             github="https://github.com/Landon345/tinder-clone"
             hosted="https://tinder-clone-7a91a.web.app"
           />
           <Project
-            image={photos.youTube}
+            images={[photos.youTubeCover, photos.youTube]}
             title="YouTube clone"
             github="https://github.com/Landon345/youtube-clone"
             hosted="https://clone-f3f9e.web.app"
+          />
+          <Project
+            images={[photos.covidTrackerCover, photos.covidTracker]}
+            title="Covid Tracker"
+            github="https://github.com/Landon345/covid-19-tracker"
+            hosted="https://covid-19-tracker-d88a8.web.app/"
           />
         </Grid>
         {/* instagram-clone */}
@@ -154,6 +173,27 @@ const Projects: React.FC = (props: Props) => {
         {/* tinder-clone */}
         {/* covid tracker */}
         {/* youTube-clone */}
+
+        <Box fontSize="40px" color="Headline" mt="60px">
+          Angular / Django Projects
+        </Box>
+        <Grid
+          templateColumns="repeat(auto-fit, minmax(400px, 1fr))"
+          gap={3}
+          justifyItems="center"
+          mt="30px"
+        >
+          <Project
+            images={[photos.whatCanICook]}
+            title="What Can I Cook"
+            github="https://github.com/Landon345/WhatCanICook"
+          />
+          <Project
+            images={[photos.homeRemodelContracting]}
+            title="Home Remodel Contracting"
+            github="https://github.com/Landon345/HomeRemodelContracting"
+          />
+        </Grid>
       </Box>
     </>
   );

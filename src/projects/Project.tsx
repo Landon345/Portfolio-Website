@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@chakra-ui/core";
 import {
   OverlayContainer,
@@ -12,7 +12,7 @@ import { css } from "emotion";
 
 type ProjectProps = {
   title: string;
-  image: string;
+  images: string[];
   github?: string;
   hosted?: string;
   video?: string;
@@ -20,17 +20,26 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({
   title,
-  image,
+  images,
   github,
   hosted,
   video,
 }) => {
+  const [myImages, setMyImages] = useState(images);
+
+  const rotateImage = () => {
+    let newArray = [...myImages];
+    const image1 = newArray.shift();
+    image1 && newArray.push(image1);
+    setMyImages(() => newArray);
+  };
+
   return (
     <div>
       <Box>
         <OverlayContainer>
-          <OverlayImage className="overlay-image" src={image} alt={""} />
-          <OverlayHover className="overlay-hover">
+          <OverlayImage className="overlay-image" src={myImages[0]} alt={""} />
+          <OverlayHover className="overlay-hover" onClick={rotateImage}>
             <OverlayDescription>
               <strong>{title}</strong>
               <Box d="flex" justifyContent="center">
