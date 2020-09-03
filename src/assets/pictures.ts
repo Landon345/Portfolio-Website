@@ -40,6 +40,16 @@ import dealornodealCover from "src/assets/dealornodealCover.png";
 import homeRemodelContracting from "src/assets/homeRemodelContracting.png";
 import tabsystemCover from "src/assets/tabsystemCover.png";
 import whatCanICook from "src/assets/whatCanICook.png";
+import BushelLogo from "src/assets/BushelLogo.png";
+import LeighHalliday from "src/assets/LeighHalliday.jpg";
+import TraversyMedia from "src/assets/TraversyMedia.jpg";
+import AndrewKirby from "src/assets/AndrewKirby.jpg";
+import HouseOfHighlights from "src/assets/HouseOfHighlights.jpg";
+import CodersTape from "src/assets/CodersTape.jpg";
+import DesignCourse from "src/assets/DesignCourse.jpg";
+import CleverProgrammer from "src/assets/CleverProgrammer.jpg";
+import HusseinNasser from "src/assets/HusseinNasser.jpg";
+import WebDevSimplified from "src/assets/WebDevSimplified.jpg";
 
 export {
   tabsystemTabs,
@@ -83,4 +93,14 @@ export {
   homeRemodelContracting,
   tabsystemCover,
   whatCanICook,
+  BushelLogo,
+  LeighHalliday,
+  WebDevSimplified,
+  TraversyMedia,
+  AndrewKirby,
+  HouseOfHighlights,
+  CodersTape,
+  DesignCourse,
+  CleverProgrammer,
+  HusseinNasser,
 };
