@@ -13,17 +13,17 @@ export const OverlayHover = styled.div`
   background: ${({ theme }) => theme.colors.ImageHover};
 `;
 
-export const OverlayContainer = styled.div`
+type OverlayContainerProps = {
+  images: number;
+};
+export const OverlayContainer = styled.div<OverlayContainerProps>`
   position: relative;
   width: 100%;
   height: auto;
+  cursor: ${({ images }) => images > 1 && "pointer"};
   background-color: white;
-  border: 1px solid ${({ theme }) => theme.colors.Paragraph};
   &:hover .overlay-hover {
     opacity: 1;
-  }
-  &:hover .overlay-image {
-    filter: blur(1px);
   }
 `;
 
