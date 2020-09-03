@@ -13,6 +13,7 @@ import { css } from "emotion";
 type ProjectProps = {
   title: string;
   images: string[];
+  description: string;
   github?: string;
   hosted?: string;
   video?: string;
@@ -21,6 +22,7 @@ type ProjectProps = {
 const Project: React.FC<ProjectProps> = ({
   title,
   images,
+  description,
   github,
   hosted,
   video,
@@ -35,35 +37,38 @@ const Project: React.FC<ProjectProps> = ({
   };
 
   return (
-    <div>
-      <Box>
-        <OverlayContainer>
-          <OverlayImage className="overlay-image" src={myImages[0]} alt={""} />
-          <OverlayHover className="overlay-hover" onClick={rotateImage}>
-            <OverlayDescription>
-              <strong>{title}</strong>
-              <Box d="flex" justifyContent="center">
-                {github && (
-                  <OverlayA href={github} target="_blank">
-                    <OverlayButton>Gitub</OverlayButton>
-                  </OverlayA>
-                )}
-                {video && (
-                  <OverlayA href={video} target="_blank">
-                    <OverlayButton>Video</OverlayButton>
-                  </OverlayA>
-                )}
-                {hosted && (
-                  <OverlayA href={hosted} target="_blank">
-                    <OverlayButton>Website</OverlayButton>
-                  </OverlayA>
-                )}
-              </Box>
-            </OverlayDescription>
-          </OverlayHover>
-        </OverlayContainer>
-      </Box>
-    </div>
+    <Box border="1px solid" borderColor="Headline">
+      <OverlayContainer images={myImages.length}>
+        <OverlayImage className="overlay-image" src={myImages[0]} alt={""} />
+        <OverlayHover className="overlay-hover" onClick={rotateImage}>
+          <OverlayDescription>
+            <Box color="Headline" fontWeight="900" fontFamily="Montserrat">
+              {title}
+            </Box>
+            <Box d="flex" justifyContent="center">
+              {github && (
+                <OverlayA href={github} target="_blank">
+                  <OverlayButton>Gitub</OverlayButton>
+                </OverlayA>
+              )}
+              {video && (
+                <OverlayA href={video} target="_blank">
+                  <OverlayButton>Video</OverlayButton>
+                </OverlayA>
+              )}
+              {hosted && (
+                <OverlayA href={hosted} target="_blank">
+                  <OverlayButton>Website</OverlayButton>
+                </OverlayA>
+              )}
+            </Box>
+            <Box color="paragraph" fontFamily="Cardo" fontSize="22px" mx="3%">
+              {description}
+            </Box>
+          </OverlayDescription>
+        </OverlayHover>
+      </OverlayContainer>
+    </Box>
   );
 };
 

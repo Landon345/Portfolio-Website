@@ -4,6 +4,10 @@ type statbarProps = {
   width: number;
 };
 
+export const CreatorList = styled.div``;
+
+export const Creator = styled.div``;
+
 export const SingleStatContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 5fr;

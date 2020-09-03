@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Box, Flex, Grid } from "@chakra-ui/core";
 import BushelLogo from "src/assets/BushelLogo.png";
+import { Creator, CreatorList } from "src/aboutme/Styles";
 import { Image } from "src/styled/StyledComponents";
 import StatsBar from "src/aboutme/StatsBar";
 //import Resume from "src/assets/githubIcon.png";
@@ -58,14 +59,19 @@ function AboutMe() {
       >
         <Box textAlign="center" width="100%">
           <Box fontSize="2.75rem" color="Headline" py="30px">
-            Skills
+            Creators I follow
           </Box>
-          <StatsBar label="React" stat={99} />
-          <StatsBar label="Laravel" stat={90} />
-          <StatsBar label="NodeJs" stat={80} />
-          <StatsBar label="Angular" stat={75} />
-          <StatsBar label="Django" stat={75} />
-          <StatsBar label="SQL" stat={85} />
+          <CreatorList>
+            <Creator>Leigh Halliday</Creator>
+            <Creator>Traversy Media</Creator>
+            <Creator>Hussein Nasser</Creator>
+            <Creator>Web Dev Simplified</Creator>
+            <Creator>Clever Programmer</Creator>
+            <Creator>Andrew Kirby</Creator>
+            <Creator>Clever Programmer</Creator>
+            <Creator>Coder's Tape</Creator>
+            <Creator>House of Highlights (for basketball)</Creator>
+          </CreatorList>
         </Box>
         <Box textAlign="center" width="100%">
           <Box fontSize="2.75rem" color="Headline" py="30px">
