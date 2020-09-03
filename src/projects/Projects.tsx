@@ -21,7 +21,7 @@ const Projects: React.FC = (props: Props) => {
             mt="60px"
             alignSelf="flex-end"
           >
-            Click on a photo to see more photos
+            Click on an arrow to see more photos
           </Box>
         </Box>
         <Grid

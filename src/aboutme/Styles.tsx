@@ -4,9 +4,23 @@ type statbarProps = {
   width: number;
 };
 
-export const CreatorList = styled.div``;
+export const CreatorList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 6%;
+  @media only screen and (max-width: 660px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-export const Creator = styled.div``;
+export const Creator = styled.a`
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 30px;
+  font-family: Cardo;
+  font-size: 22px;
+`;
 
 export const SingleStatContainer = styled.div`
   display: grid;

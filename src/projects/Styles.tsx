@@ -20,7 +20,7 @@ export const OverlayContainer = styled.div<OverlayContainerProps>`
   position: relative;
   width: 100%;
   height: auto;
-  cursor: ${({ images }) => images > 1 && "pointer"};
+  /* cursor: ${({ images }) => images > 1 && "pointer"}; */
   background-color: white;
   &:hover .overlay-hover {
     opacity: 1;

@@ -34,5 +34,8 @@ export const Hr = styled.hr`
 
 export const Image = styled.img`
   object-fit: contain;
-  height: ${({ height }) => height};
+`;
+export const RoundImage = styled.img`
+  object-fit: contain;
+  border-radius: 50%;
 `;

@@ -2,10 +2,11 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { Box, Flex, Grid } from "@chakra-ui/core";
-import BushelLogo from "src/assets/BushelLogo.png";
+import * as photos from "src/assets/pictures";
 import { Creator, CreatorList } from "src/aboutme/Styles";
-import { Image } from "src/styled/StyledComponents";
+import { Image, RoundImage } from "src/styled/StyledComponents";
 import StatsBar from "src/aboutme/StatsBar";
+import YouTuber from "src/aboutme/YouTuber";
 //import Resume from "src/assets/githubIcon.png";
 
 function AboutMe() {
@@ -58,30 +59,78 @@ function AboutMe() {
         mt="60px"
       >
         <Box textAlign="center" width="100%">
-          <Box fontSize="2.75rem" color="Headline" py="30px">
+          <Box
+            fontSize="2.75rem"
+            color="Headline"
+            py="30px"
+            fontFamily="Montserrat"
+          >
             Creators I follow
           </Box>
           <CreatorList>
-            <Creator>Leigh Halliday</Creator>
-            <Creator>Traversy Media</Creator>
-            <Creator>Hussein Nasser</Creator>
-            <Creator>Web Dev Simplified</Creator>
-            <Creator>Clever Programmer</Creator>
-            <Creator>Andrew Kirby</Creator>
-            <Creator>Clever Programmer</Creator>
-            <Creator>Coder's Tape</Creator>
-            <Creator>House of Highlights (for basketball)</Creator>
+            <YouTuber
+              name="Leigh Halliday"
+              photo={photos.LeighHalliday}
+              link="https://www.youtube.com/channel/UCWPY8W-FAZ2HdDiJp2RC_sQ"
+            />
+            <YouTuber
+              name="Traversy Media"
+              photo={photos.TraversyMedia}
+              link="https://www.youtube.com/user/TechGuyWeb"
+            />
+            <YouTuber
+              name="Design Course"
+              photo={photos.DesignCourse}
+              link="https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow"
+            />
+            <YouTuber
+              name="Hussein Nasser"
+              photo={photos.HusseinNasser}
+              link="https://www.youtube.com/channel/UC_ML5xP23TOWKUcc-oAE_Eg"
+            />
+            <YouTuber
+              name="Web Dev Simplified"
+              photo={photos.WebDevSimplified}
+              link="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw"
+            />
+            <YouTuber
+              name="Clever Programmer"
+              photo={photos.CleverProgrammer}
+              link="https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ"
+            />
+            <YouTuber
+              name="Andrew Kirby"
+              photo={photos.AndrewKirby}
+              link="https://www.youtube.com/channel/UC8JNIm02zw8h_3NBrP_zsZA"
+            />
+            <YouTuber
+              name="Coder's Tape"
+              photo={photos.CodersTape}
+              link="https://www.youtube.com/channel/UCQI-Ym2rLZx52vEoqlPQMdg"
+            />
+            <YouTuber
+              name="House of Highlights"
+              photo={photos.HouseOfHighlights}
+              link="https://www.youtube.com/channel/UCqQo7ewe87aYAe7ub5UqXMw"
+            />
           </CreatorList>
         </Box>
         <Box textAlign="center" width="100%">
-          <Box fontSize="2.75rem" color="Headline" py="30px">
+          <Box
+            fontSize="2.75rem"
+            color="Headline"
+            py="30px"
+            fontFamily="Montserrat"
+          >
             Experience
           </Box>
-          <Box d="flex" mx="10%" mt="10px">
-            <Box d="flex" mr="30px">
-              <Image src={BushelLogo} alt="bushel" height="60px" />
+          <Box d="flex" mx="8%" mt="10px">
+            <Box d="flex" flex="0.3">
+              <a href="https://bushelpowered.com/" target="_blank">
+                <Image src={photos.BushelLogo} alt="bushel" height="60px" />
+              </a>
             </Box>
-            <Box d="flex" flexDir="column" textAlign="left">
+            <Box d="flex" flex="2" flexDir="column" textAlign="left" pl="60px">
               <Box color="Paragraph" fontSize="20px" fontWeight="800">
                 Software Engineer Intern
               </Box>
