@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "src/projects/Project";
 import { Grid, Box } from "@chakra-ui/core";
+import { css } from "emotion";
 
 import * as photos from "src/assets/pictures";
 
@@ -11,7 +12,7 @@ const Projects: React.FC = (props: Props) => {
     <>
       <Box mx="5%">
         {/* Featured */}
-        <Box d="flex" justifyContent="space-between">
+        <Box d="flex" justifyContent="space-between" flexWrap="wrap">
           <Box fontSize="40px" color="Headline" mt="60px">
             Featured
           </Box>
@@ -21,7 +22,7 @@ const Projects: React.FC = (props: Props) => {
             mt="60px"
             alignSelf="flex-end"
           >
-            Click on an arrow to see more photos
+            Click on an arrow to see more photos. Some projects have a video.
           </Box>
         </Box>
         <Grid
@@ -40,6 +41,7 @@ const Projects: React.FC = (props: Props) => {
             ]}
             title="Full Stack Pokedex"
             github="https://github.com/Landon345/FullStack-Pokemon"
+            video="https://youtu.be/rcZEEVQ20rA"
           />
           <Project
             description="I wanted to make a tab system for my family's campground."
@@ -51,9 +53,10 @@ const Projects: React.FC = (props: Props) => {
             ]}
             title="Tab System"
             github="https://github.com/Landon345/Tabsystem"
+            video="https://youtu.be/Ly9c_APCj5U"
           />
           <Project
-            description="Trading practice is built with React, Nodejs, and Postgress. It was a group project for CSCI 366 (database systems)"
+            description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
             images={[photos.TradingPractice]}
             title="Trading Practice"
             github="https://github.com/Landon345/Landon345-TradingPractice"
@@ -61,12 +64,16 @@ const Projects: React.FC = (props: Props) => {
           />
         </Grid>
 
-        {/* Full stack pokemon */}
-        {/* TabSystem */}
-        {/* Trading Practice */}
-
-        {/* My Progression in React */}
-        <Box fontSize="40px" color="Headline" mt="60px">
+        <Box
+          fontSize="40px"
+          color="Headline"
+          mt="60px"
+          className={css`
+            @media only screen and (max-width: 460px) {
+              font-size: 30px;
+            }
+          `}
+        >
           Progression in React
         </Box>
         <Grid
@@ -91,6 +98,7 @@ const Projects: React.FC = (props: Props) => {
             ]}
             title="First Pokemon"
             github="https://github.com/Landon345/Pokemon-FrontEndWebProject"
+            video="https://youtu.be/h_Tt3isjhWk"
           />
           <Project
             description="When I had spare time over Christmas break, I went ham on React and built a cookie clicker clone for my third project with React."
@@ -109,6 +117,7 @@ const Projects: React.FC = (props: Props) => {
             ]}
             title="Frontend Pokemon"
             github="https://github.com/Landon345/Frontend-Pokemon"
+            video="https://youtu.be/aCBv8yStt44"
           />
           <Project
             description="At Bushel, they had the interns do both a backend and frontend challenge. Then we put them together, and this is the result."
@@ -120,16 +129,20 @@ const Projects: React.FC = (props: Props) => {
             ]}
             title="Full Stack Pokedex"
             github="https://github.com/Landon345/FullStack-Pokemon"
+            video="https://youtu.be/rcZEEVQ20rA"
           />
         </Grid>
-        {/* First React Project (deal or no deal) */}
-        {/* Then first pokemon */}
-        {/* Then cookie clicker */}
-        {/* Then second pokemon */}
-        {/* Then third pokemon */}
 
-        {/* CleverProgrammer Projects */}
-        <Box fontSize="40px" color="Headline" mt="60px">
+        <Box
+          fontSize="40px"
+          color="Headline"
+          mt="60px"
+          className={css`
+            @media only screen and (max-width: 460px) {
+              font-size: 30px;
+            }
+          `}
+        >
           CleverProgrammer Projects
         </Box>
         <Grid
@@ -181,14 +194,17 @@ const Projects: React.FC = (props: Props) => {
             hosted="https://covid-19-tracker-d88a8.web.app/"
           />
         </Grid>
-        {/* instagram-clone */}
-        {/* netflix-clone */}
-        {/* amazon-clone */}
-        {/* tinder-clone */}
-        {/* covid tracker */}
-        {/* youTube-clone */}
 
-        <Box fontSize="40px" color="Headline" mt="60px">
+        <Box
+          fontSize="40px"
+          color="Headline"
+          mt="60px"
+          className={css`
+            @media only screen and (max-width: 460px) {
+              font-size: 30px;
+            }
+          `}
+        >
           Angular / Django Projects
         </Box>
         <Grid

@@ -5,7 +5,7 @@ import { Box, Flex, Grid } from "@chakra-ui/core";
 import * as photos from "src/assets/pictures";
 import { Creator, CreatorList } from "src/aboutme/Styles";
 import { Image, RoundImage } from "src/styled/StyledComponents";
-import StatsBar from "src/aboutme/StatsBar";
+import { css } from "emotion";
 import YouTuber from "src/aboutme/YouTuber";
 //import Resume from "src/assets/githubIcon.png";
 
@@ -20,6 +20,11 @@ function AboutMe() {
         color="Headline"
         fontFamily="Montserrat"
         fontWeight="bold"
+        className={css`
+          @media only screen and (max-width: 660px) {
+            font-size: 35px;
+          }
+        `}
       >
         Full Stack Developer
       </Box>
@@ -64,6 +69,11 @@ function AboutMe() {
             color="Headline"
             py="30px"
             fontFamily="Montserrat"
+            className={css`
+              @media only screen and (max-width: 660px) {
+                font-size: 2rem;
+              }
+            `}
           >
             Creators I follow
           </Box>
@@ -109,6 +119,11 @@ function AboutMe() {
               link="https://www.youtube.com/channel/UCQI-Ym2rLZx52vEoqlPQMdg"
             />
             <YouTuber
+              name="Ben Awad"
+              photo={photos.BenAwad}
+              link="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw"
+            />
+            <YouTuber
               name="House of Highlights"
               photo={photos.HouseOfHighlights}
               link="https://www.youtube.com/channel/UCqQo7ewe87aYAe7ub5UqXMw"
@@ -121,6 +136,11 @@ function AboutMe() {
             color="Headline"
             py="30px"
             fontFamily="Montserrat"
+            className={css`
+              @media only screen and (max-width: 660px) {
+                font-size: 2rem;
+              }
+            `}
           >
             Experience
           </Box>

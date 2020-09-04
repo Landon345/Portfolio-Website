@@ -12,6 +12,7 @@ import {
 import { NavbarLink, SidebarLink, SidebarContainer } from "src/navbar/Styles";
 import { Icon, Switch } from "@chakra-ui/core";
 import { motion } from "framer-motion";
+import { useMedia } from "react-media";
 
 type NavbarProps = {
   sidebar: boolean;
@@ -26,19 +27,26 @@ const Navbar: React.FC<NavbarProps> = ({
   dark,
   setDark,
 }) => {
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-  window.onresize = () => {
-    setWindowSize(window.innerWidth);
+  const MEDIA_QUERIES = {
+    small: "(max-width: 860px)",
+    large: "(min-width: 861px)",
   };
+  const matches = useMedia({ queries: MEDIA_QUERIES });
 
   return (
     <>
-      <Flex justifyContent="center" alignItems="center" py="10px" mx="3%">
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        py="10px"
+        mx="3%"
+        overflowX="hidden"
+      >
         <Box w="20%" d="flex" alignItems="center" justifyContent="center">
           <Box color="Headline" mr="10px">
             Dark{" "}
           </Box>
+
           <Switch
             size="sm"
             isChecked={dark == "true"}
@@ -62,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </Box>
           </Link>
         </Box>
-        {windowSize > 860 && (
+        {matches.large && (
           <>
             <Box
               w="30%"
@@ -104,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </>
         )}
 
-        {windowSize <= 860 && (
+        {matches.small && (
           <Box
             onClick={() => setSidebar(!sidebar)}
             position="absolute"
@@ -131,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </Box>
         )}
 
-        {windowSize <= 860 && (
+        {matches.small && (
           <>
             <SidebarContainer open={sidebar}>
               <motion.div

@@ -58,5 +58,5 @@ export const SidebarContainer = styled("div")<sidebarProps>`
   z-index: 100;
 
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 1s ease-in-out;
+  transition: transform 0.75s ease-in-out;
 `;
