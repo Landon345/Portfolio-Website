@@ -50,6 +50,7 @@ import DesignCourse from "src/assets/DesignCourse.jpg";
 import CleverProgrammer from "src/assets/CleverProgrammer.jpg";
 import HusseinNasser from "src/assets/HusseinNasser.jpg";
 import WebDevSimplified from "src/assets/WebDevSimplified.jpg";
+import BenAwad from "src/assets/BenAwad.jpg";
 
 export {
   tabsystemTabs,
@@ -103,4 +104,5 @@ export {
   DesignCourse,
   CleverProgrammer,
   HusseinNasser,
+  BenAwad,
 };
