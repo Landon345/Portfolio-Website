@@ -62,6 +62,13 @@ const Projects: React.FC = (props: Props) => {
             github='https://github.com/Landon345/Landon345-TradingPractice'
             video='https://drive.google.com/file/d/1w0nsRuOq1uYGyq_UrIHI6YC2jQG2MPTb/view?usp=sharing'
           />
+          <Project
+            description='I am starting to get into graphql and nextjs. I followed a Leigh Halliday tutorial for this one.'
+            images={[photos.GraphQLResumeCover, photos.GraphqlResume]}
+            title='GraphQl Resume'
+            github='https://github.com/Landon345/next-js-graphql-resume'
+            hosted='https://next-js-graphql-resume.vercel.app/'
+          />
         </Grid>
 
         <Box
@@ -215,7 +222,11 @@ const Projects: React.FC = (props: Props) => {
         >
           <Project
             description='The idea of this project is that a user can say what ingredients they have, and the app will find recipes that have those ingredients. To make it actually useful, it needs a ton of recipes in the database.'
-            images={[photos.whatCanICook]}
+            images={[
+              photos.whatCanICook,
+              photos.WhatCanICookRecipes,
+              photos.WhatCanICookHome,
+            ]}
             title='What Can I Cook'
             github='https://github.com/Landon345/WhatCanICook'
           />
