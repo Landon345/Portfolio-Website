@@ -57,6 +57,9 @@ import ContractingSearch1 from 'src/assets/ContractingSearch1.jpg';
 import ContractingSearch2 from 'src/assets/ContractingSearch2.jpg';
 import ContractingLogin from 'src/assets/ContractingLogin.jpg';
 import ContractingRegister from 'src/assets/ContractingRegister.jpg';
+import WhatCanICookHome from 'src/assets/WhatCanICookHome.jpg';
+import WhatCanICookRecipes from 'src/assets/WhatCanICookRecipes.jpg';
+import GraphQLResumeCover from 'src/assets/GraphQLResumeCover.jpg';
 
 export {
   tabsystemTabs,
@@ -116,4 +119,7 @@ export {
   ContractingSearch2,
   ContractingLogin,
   ContractingRegister,
+  WhatCanICookHome,
+  WhatCanICookRecipes,
+  GraphQLResumeCover,
 };
