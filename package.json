@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Landon345.github.io/portfolio-website/",
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
@@ -18,6 +19,7 @@
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "framer-motion": "^2.6.2",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-media": "^2.0.0-rc.1",
@@ -26,6 +28,8 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
