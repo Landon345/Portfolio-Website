@@ -48,15 +48,14 @@ export const SidebarLink = styled.div`
 
 export const SidebarContainer = styled("div")<sidebarProps>`
   position: absolute;
-  height: 65vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 300px;
+  width: 100%;
   right: 0;
   background-color: ${({ theme }) => theme.colors.BackgroundHover};
-  top: 73px;
+  top: 68px;
   z-index: 100;
 
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 0.75s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transition: transform 0.25s ease-in-out;
 `;

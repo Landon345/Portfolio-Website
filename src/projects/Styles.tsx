@@ -13,6 +13,18 @@ export const OverlayHover = styled.div`
   background: ${({ theme }) => theme.colors.ImageHover};
 `;
 
+export const ProjectsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  margin-top: 30px;
+
+  @media only screen and (max-width: 560px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+`;
+
 type OverlayContainerProps = {
   images: number;
 };
@@ -21,6 +33,7 @@ export const OverlayContainer = styled.div<OverlayContainerProps>`
   width: 100%;
   height: auto;
   /* cursor: ${({ images }) => images > 1 && "pointer"}; */
+
   background-color: white;
   &:hover .overlay-hover {
     opacity: 1;
@@ -66,7 +79,7 @@ export const OverlayButton = styled.button`
   cursor: pointer;
   border: 1px solid ${({ theme }) => theme.colors.ButtonText};
   border-radius: 30px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 670px) {
     padding: 5px 15px;
   }
   &:hover {
