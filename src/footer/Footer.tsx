@@ -15,6 +15,7 @@ const Footer: React.FC = (props: Props) => {
         bg="Background"
         justifyContent="space-around"
         alignItems="center"
+        flexWrap="wrap"
         width="100vw"
       >
         <Link to="/">
