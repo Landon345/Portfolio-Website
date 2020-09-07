@@ -1,33 +1,28 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import { ThemeProvider } from "emotion-theming";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
-import { Box } from "@chakra-ui/core";
-import { Hr } from "src/styled/StyledComponents";
-import AboutMe from "src/aboutme/AboutMe";
-import { darkPortfolioTheme, portfolioTheme } from "src/styled/portfolioTheme";
-import Navbar from "src/navbar/Navbar";
-import Footer from "src/footer/Footer";
-import Projects from "src/projects/Projects";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { ThemeProvider } from 'emotion-theming';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Box } from '@chakra-ui/core';
+import { Hr } from 'src/styled/StyledComponents';
+import AboutMe from 'src/aboutme/AboutMe';
+import { darkPortfolioTheme, portfolioTheme } from 'src/styled/portfolioTheme';
+import Navbar from 'src/navbar/Navbar';
+import Footer from 'src/footer/Footer';
+import Projects from 'src/projects/Projects';
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
-  const [dark, setDark] = useState(localStorage.getItem("dark") || "null");
+  const [dark, setDark] = useState(localStorage.getItem('dark') || 'null');
 
   useEffect(() => {
-    localStorage.setItem("dark", dark);
+    localStorage.setItem('dark', dark);
   }, [dark]);
   return (
     <Router>
       <ThemeProvider
-        theme={dark === "true" ? darkPortfolioTheme : portfolioTheme}
+        theme={dark === 'true' ? darkPortfolioTheme : portfolioTheme}
       >
-        <Box bg="Background" minH="100vh">
+        <Box bg='Background' minH='100vh'>
           <Navbar
             sidebar={sidebar}
             setSidebar={setSidebar}
@@ -36,13 +31,13 @@ function App() {
           />
           <Hr />
           <Switch>
-            <Route path="/" exact>
-              <Box onClick={() => setSidebar(false)} minH="85vh">
+            <Route path='/' exact>
+              <Box onClick={() => setSidebar(false)} minH='85vh'>
                 <AboutMe />
               </Box>
             </Route>
-            <Route path="/projects" exact>
-              <Box onClick={() => setSidebar(false)} minH="85vh">
+            <Route path='/projects' exact>
+              <Box onClick={() => setSidebar(false)} minH='85vh'>
                 <Projects />
               </Box>
             </Route>
