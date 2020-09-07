@@ -28,6 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({
   setDark,
 }) => {
   const MEDIA_QUERIES = {
+    // xs: '(max-width: 470px)',
     small: '(max-width: 860px)',
     large: '(min-width: 861px)',
   };
@@ -63,6 +64,9 @@ const Navbar: React.FC<NavbarProps> = ({
               className={css`
                 @media only screen and (max-width: 860px) {
                   font-size: 40px;
+                }
+                @media only screen and (max-width: 560px) {
+                  font-size: 30px;
                 }
               `}
             >
@@ -121,17 +125,44 @@ const Navbar: React.FC<NavbarProps> = ({
           >
             {sidebar ? (
               <Box cursor='pointer'>
-                <Icon name='close' size='30px' color='Headline' />
+                <Icon
+                  name='close'
+                  size='30px'
+                  color='Headline'
+                  className={css`
+                    @media only screen and (max-width: 460px) {
+                      height: 20px;
+                    }
+                  `}
+                />
               </Box>
             ) : (
               <>
                 {dark === 'true' ? (
                   <Box cursor='pointer'>
-                    <img src={menuIcon2} alt='menu' height='30px' />
+                    <img
+                      src={menuIcon2}
+                      alt='menu'
+                      height='30px'
+                      className={css`
+                        @media only screen and (max-width: 460px) {
+                          height: 20px;
+                        }
+                      `}
+                    />
                   </Box>
                 ) : (
                   <Box cursor='pointer'>
-                    <img src={menuIcon} alt='menu' height='30px' />
+                    <img
+                      src={menuIcon}
+                      alt='menu'
+                      height='30px'
+                      className={css`
+                        @media only screen and (max-width: 460px) {
+                          height: 20px;
+                        }
+                      `}
+                    />
                   </Box>
                 )}
               </>

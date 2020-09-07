@@ -1,4 +1,4 @@
-import styled from "src/styled/styled";
+import styled from 'src/styled/styled';
 
 type sidebarProps = {
   open: boolean;
@@ -46,17 +46,17 @@ export const SidebarLink = styled.div`
   }
 `;
 
-export const SidebarContainer = styled("div")<sidebarProps>`
+export const SidebarContainer = styled('div')<sidebarProps>`
   position: absolute;
-  height: 65vh;
+  /* height: 65vh; */
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 300px;
+  /* width: 300px; */
   right: 0;
   background-color: ${({ theme }) => theme.colors.BackgroundHover};
   top: 73px;
   z-index: 100;
 
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.75s ease-in-out;
 `;

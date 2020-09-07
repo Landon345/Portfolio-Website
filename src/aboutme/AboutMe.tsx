@@ -6,9 +6,13 @@ import { CreatorList } from 'src/aboutme/Styles';
 import { Image } from 'src/styled/StyledComponents';
 import { css } from 'emotion';
 import YouTuber from 'src/aboutme/YouTuber';
-//import Resume from "src/assets/githubIcon.png";
 
 function AboutMe() {
+  // const MEDIA_QUERIES = {
+  //   small: '(max-width: 860px)',
+  //   large: '(min-width: 861px)',
+  // };
+  // const matches = useMedia({ queries: MEDIA_QUERIES });
   return (
     <div>
       <Box
@@ -22,6 +26,9 @@ function AboutMe() {
         className={css`
           @media only screen and (max-width: 660px) {
             font-size: 35px;
+          }
+          @media only screen and (max-width: 460px) {
+            font-size: 30px;
           }
         `}
       >
@@ -66,17 +73,25 @@ function AboutMe() {
         while you're at it.
       </Box>
 
-      <Grid
-        templateColumns='repeat(auto-fit, minmax(650px, 1fr))'
-        gap={6}
+      <Box
+        d='grid'
+        gridTemplateColumns='repeat(auto-fit, minmax(650px, 1fr))'
+        gridGap={6}
         justifyItems='center'
         mt='60px'
+        className={css`
+          @media only screen and (max-width: 660px) {
+            display: inline-block;
+          }
+        `}
       >
-        <Box textAlign='center' width='100%'>
+        <Box width='100%'>
           <Box
+            d='flex'
             fontSize='2.75rem'
             color='Headline'
             py='30px'
+            justifyContent='center'
             fontFamily='Montserrat'
             className={css`
               @media only screen and (max-width: 660px) {
@@ -139,8 +154,10 @@ function AboutMe() {
             />
           </CreatorList>
         </Box>
-        <Box textAlign='center' width='100%'>
+        <Box width='100%'>
           <Box
+            d='flex'
+            justifyContent='center'
             fontSize='2.75rem'
             color='Headline'
             py='30px'
@@ -160,10 +177,19 @@ function AboutMe() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <Image src={photos.BushelLogo} alt='bushel' height='60px' />
+                <Image
+                  src={photos.BushelLogo}
+                  alt='bushel'
+                  height='60px'
+                  className={css`
+                    @media only screen and (max-width: 660px) {
+                      height: 40px;
+                    }
+                  `}
+                />
               </a>
             </Box>
-            <Box d='flex' flex='2' flexDir='column' textAlign='left' pl='60px'>
+            <Box d='flex' flex='2' flexDir='column' textAlign='left' pl='3%'>
               <Box color='Paragraph' fontSize='20px' fontWeight='800'>
                 Software Engineer Intern
               </Box>
@@ -183,7 +209,7 @@ function AboutMe() {
             </Box>
           </Box>
         </Box>
-      </Grid>
+      </Box>
 
       <Box justifyContent='center' d='flex'>
         {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

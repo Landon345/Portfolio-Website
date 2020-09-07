@@ -1,4 +1,4 @@
-import styled from "src/styled/styled";
+import styled from 'src/styled/styled';
 
 export const OverlayHover = styled.div`
   position: absolute;
@@ -20,7 +20,8 @@ export const OverlayContainer = styled.div<OverlayContainerProps>`
   position: relative;
   width: 100%;
   height: auto;
-  /* cursor: ${({ images }) => images > 1 && "pointer"}; */
+  /* cursor: ${({ images }) => images > 1 && 'pointer'}; */
+
   background-color: white;
   &:hover .overlay-hover {
     opacity: 1;
@@ -66,7 +67,7 @@ export const OverlayButton = styled.button`
   cursor: pointer;
   border: 1px solid ${({ theme }) => theme.colors.ButtonText};
   border-radius: 30px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 670px) {
     padding: 5px 15px;
   }
   &:hover {

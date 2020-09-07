@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Icon } from '@chakra-ui/core';
+import { css } from 'emotion';
 import {
   OverlayContainer,
   OverlayImage,
