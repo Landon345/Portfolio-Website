@@ -52,18 +52,18 @@ const Projects: React.FC = (props: Props) => {
             video="https://youtu.be/Ly9c_APCj5U"
           />
           <Project
-            description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
-            images={[photos.TradingPractice]}
-            title="Trading Practice"
-            github="https://github.com/Landon345/Landon345-TradingPractice"
-            video="https://drive.google.com/file/d/1w0nsRuOq1uYGyq_UrIHI6YC2jQG2MPTb/view?usp=sharing"
-          />
-          <Project
             description="I am starting to get into graphql and nextjs. I followed a Leigh Halliday tutorial for this one."
             images={[photos.GraphQLResumeCover, photos.GraphqlResume]}
             title="GraphQl Resume"
             github="https://github.com/Landon345/next-js-graphql-resume"
             hosted="https://next-js-graphql-resume.vercel.app/"
+          />
+          <Project
+            description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
+            images={[photos.TradingPractice]}
+            title="Trading Practice"
+            github="https://github.com/Landon345/Landon345-TradingPractice"
+            video="https://drive.google.com/file/d/1w0nsRuOq1uYGyq_UrIHI6YC2jQG2MPTb/view?usp=sharing"
           />
         </ProjectsGrid>
 
