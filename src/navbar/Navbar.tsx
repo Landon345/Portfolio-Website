@@ -10,21 +10,21 @@ import {
   menuIcon2,
 } from "src/assets/pictures";
 import { NavbarLink, SidebarLink, SidebarContainer } from "src/navbar/Styles";
-import { Icon, Switch } from "@chakra-ui/core";
+import { Icon, Switch, Select } from "@chakra-ui/core";
 import { useMedia } from "react-media";
 
 type NavbarProps = {
   sidebar: boolean;
   setSidebar: (sidebar: boolean) => void;
-  dark: string;
-  setDark: (dark: string) => void;
+  chosenTheme: string;
+  setChosenTheme: (dark: string) => void;
 };
 
 const Navbar: React.FC<NavbarProps> = ({
   sidebar,
   setSidebar,
-  dark,
-  setDark,
+  chosenTheme,
+  setChosenTheme,
 }) => {
   const MEDIA_QUERIES = {
     // xs: '(max-width: 470px)',
@@ -47,22 +47,31 @@ const Navbar: React.FC<NavbarProps> = ({
           justifyContent="space-around"
           w="70%"
           className={css`
-            @media only screen and (max-width: 560px) {
+            @media only screen and (max-width: 760px) {
               margin-right: 15%;
               flex-wrap: wrap;
             }
           `}
         >
-          <Box d="flex" alignItems="center" justifyContent="center">
-            <Box color="Headline" mr="10px">
-              Dark{" "}
+          <Box d="flex" alignItems="center" justifyContent="center" mr="20px">
+            <Box color="Headline" pr="32px" fontSize="15px">
+              Theme
             </Box>
 
-            <Switch
+            <Select
+              variant="outline"
+              value={chosenTheme}
+              onChange={(e) => setChosenTheme(e.target.value)}
+              color="Headline"
+              bg="Background"
               size="sm"
-              isChecked={dark === "true"}
-              onChange={() => setDark(dark === "true" ? "null" : "true")}
-            />
+            >
+              <option value="light1">office</option>
+              <option value="light2">sky</option>
+              <option value="dark2">night</option>
+              <option value="dark1">disco</option>
+              <option value="darkPine">pine</option>
+            </Select>
           </Box>
           <Box d="flex" alignItems="center">
             <Link to="/">
@@ -72,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 fontWeight="bold"
                 fontFamily="TimesNewRoman"
                 className={css`
-                  @media only screen and (max-width: 860px) {
+                  @media only screen and (max-width: 920px) {
                     font-size: 40px;
                   }
                   @media only screen and (max-width: 600px) {
@@ -108,7 +117,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {dark === "true" ? (
+                  {chosenTheme.match(/dark/i) ? (
                     <img src={GitHubIcon3} alt="Github" height="30px" />
                   ) : (
                     <img src={GitHubIcon} alt="Github" height="30px" />
@@ -149,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </Box>
             ) : (
               <>
-                {dark === "true" ? (
+                {chosenTheme.match(/dark/i) ? (
                   <Box cursor="pointer">
                     <img
                       src={menuIcon2}
@@ -203,7 +212,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 >
                   <SidebarLink>
                     <Box mr="10px">GitHub</Box>
-                    {dark === "true" ? (
+                    {chosenTheme.match(/dark/i) ? (
                       <img src={GitHubIcon3} alt="Github" height="30px" />
                     ) : (
                       <img src={GitHubIcon} alt="Github" height="30px" />
