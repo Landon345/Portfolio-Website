@@ -18,14 +18,14 @@ const Footer: React.FC = (props: Props) => {
         flexWrap="wrap"
         width="100vw"
       >
+        <Box color="Paragraph" px="5px">
+          Landon Schlangen © 2020
+        </Box>
         <Link to="/">
           <Box color="Paragraph" px="5px">
             About Me
           </Box>
         </Link>
-        <Box color="Paragraph" px="5px">
-          Landon Schlangen © 2020
-        </Box>
         <Link to="/projects">
           <Box color="Paragraph" px="5px">
             Projects
@@ -34,9 +34,19 @@ const Footer: React.FC = (props: Props) => {
 
         <Box color="Paragraph" px="5px">
           Themes From{" "}
-          <a href="https://www.happyhues.co/" target="_blank">
+          <a
+            href="https://www.happyhues.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             HappyHues
           </a>
+        </Box>
+        <Box color="Paragraph" px="5px">
+          phone: 320-260-4994
+        </Box>
+        <Box color="Paragraph" px="5px">
+          email: lschlangen5@gmail.com
         </Box>
       </Box>
     </Box>
