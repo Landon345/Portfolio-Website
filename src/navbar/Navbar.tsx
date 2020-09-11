@@ -10,7 +10,7 @@ import {
   menuIcon2,
 } from "src/assets/pictures";
 import { NavbarLink, SidebarLink, SidebarContainer } from "src/navbar/Styles";
-import { Icon, Switch, Select } from "@chakra-ui/core";
+import { Icon, Select } from "@chakra-ui/core";
 import { useMedia } from "react-media";
 
 type NavbarProps = {
@@ -28,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const MEDIA_QUERIES = {
     // xs: '(max-width: 470px)',
-    small: "(max-width: 860px)",
-    large: "(min-width: 861px)",
+    small: "(max-width: 920px)",
+    large: "(min-width: 921px)",
   };
   const matches = useMedia({ queries: MEDIA_QUERIES });
 

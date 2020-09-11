@@ -27,21 +27,22 @@ export const SingleStatContainer = styled.div`
   grid-template-columns: 1fr 5fr;
   text-align: left;
   margin: 5px 5% 5px 100px;
-  padding: 20px 0px;
+  padding: 30px 0px;
   font-size: 30px;
   @media only screen and (max-width: 558px) {
-    font-size: 13px;
+    font-size: 18px;
   }
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1500px) {
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     margin: 5px 5% 5px 5%;
   }
 `;
 
 /**Set the width and background color of the Statbar by using props passed into it: maxStat, typeColor, and stat */
 export const StatBar = styled.div<statbarProps>`
-  background-color: ${({ theme }) => theme.colors.Highlight};
+  background-color: ${({ theme }) => theme.colors.Tertiary};
   color: ${({ theme }) => theme.colors.Stroke};
   width: ${(props) => props.width + "%"};
 `;

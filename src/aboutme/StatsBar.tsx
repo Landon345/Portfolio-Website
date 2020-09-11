@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/core";
 import { SingleStatContainer, StatBar, StatBarWhole } from "src/aboutme/Styles";
-
+import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 
 type StatsBarProps = {
@@ -12,14 +12,24 @@ type StatsBarProps = {
 const StatsBar: React.FC<StatsBarProps> = ({ label, stat }) => {
   return (
     <>
-      <SingleStatContainer>
-        <Box color="Paragraph">{label}</Box>
-        <StatBarWhole>
-          <StatBar width={stat}>
-            <Box ml="15px">{stat}/100</Box>
-          </StatBar>
-        </StatBarWhole>
-      </SingleStatContainer>
+      <VisibilitySensor>
+        {({ isVisible }) => (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
+            transition={{ delay: 0, duration: 0.25 }}
+          >
+            <SingleStatContainer>
+              <Box color="Paragraph">{label}</Box>
+              <StatBarWhole>
+                <StatBar width={stat}>
+                  <Box ml="15px">{stat}/100</Box>
+                </StatBar>
+              </StatBarWhole>
+            </SingleStatContainer>
+          </motion.div>
+        )}
+      </VisibilitySensor>
     </>
   );
 };

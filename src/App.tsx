@@ -18,7 +18,6 @@ import Projects from "src/projects/Projects";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
-  const [dark, setDark] = useState(localStorage.getItem("dark") || "null");
   const [chosenTheme, setChosenTheme] = useState(
     localStorage.getItem("theme") || "light1"
   );
@@ -53,6 +52,7 @@ function App() {
             setChosenTheme={setChosenTheme}
             chosenTheme={chosenTheme}
           />
+
           <Hr />
           <Switch>
             <Route path="/" exact>

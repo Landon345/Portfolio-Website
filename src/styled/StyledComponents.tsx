@@ -1,20 +1,13 @@
 import styled from "src/styled/styled";
 
-type buttonProps = {
-  bg: string;
-  color: string;
-  bgHover: string;
-  theme?: object;
-};
-
-export const Button = styled.button<buttonProps>`
-  background-color: ${({ theme }) => theme.colors.Background};
+export const Button = styled.button`
+  background-color: ${({ theme }) => theme.colors.Button};
   outline: none;
   border: none;
-  color: ${({ theme }) => theme.colors.Headline};
+  color: ${({ theme }) => theme.colors.ButtonText};
   padding: 10px 30px;
   cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.colors.ButtonText};
+  border: 1px solid ${({ theme }) => theme.colors.Headline};
   border-radius: 30px;
   @media only screen and (max-width: 768px) {
     padding: 5px 15px;

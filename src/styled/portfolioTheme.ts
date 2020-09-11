@@ -13,7 +13,7 @@ export const lightTheme1 = {
     Button: "#ff8e3c",
     ButtonHover: "#ff7211",
     ButtonText: "#0d0d0d",
-    Hr: "#eee8e1",
+    Hr: "#cec8c1",
     ImageHover: "#eff0f3d0",
 
     Stroke: "#0d0d0d",
@@ -59,7 +59,7 @@ export const darkTheme1 = {
     Button: "#eebbc3",
     ButtonHover: "#ddaab2",
     ButtonText: "#232946",
-    Hr: "#131946",
+    Hr: "#333388",
     ImageHover: "#232946d0",
 
     Stroke: "#121629",
@@ -82,7 +82,7 @@ export const darkTheme2 = {
     Button: "#7f5af0",
     ButtonHover: "#ddaab2",
     ButtonText: "#fffffe",
-    Hr: "#131946",
+    Hr: "#445588",
     ImageHover: "#232946d0",
 
     Stroke: "#010101",
@@ -105,7 +105,7 @@ export const darkPine = {
     Button: "#f9bc60",
     ButtonHover: "#f1a670",
     ButtonText: "#001e1d",
-    Hr: "#004623",
+    Hr: "#002200",
     ImageHover: "#112211d0",
 
     Stroke: "#001e1d",

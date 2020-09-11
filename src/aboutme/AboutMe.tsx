@@ -3,9 +3,10 @@ import React from "react";
 import { Box } from "@chakra-ui/core";
 import * as photos from "src/assets/pictures";
 import { CreatorList } from "src/aboutme/Styles";
-import { Image } from "src/styled/StyledComponents";
+import { Image, Button } from "src/styled/StyledComponents";
 import { css } from "emotion";
 import YouTuber from "src/aboutme/YouTuber";
+import StatsBar from "src/aboutme/StatsBar";
 
 function AboutMe() {
   return (
@@ -206,15 +207,83 @@ function AboutMe() {
         </Box>
       </Box>
 
-      <Box justifyContent="center" d="flex">
-        {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <a
-            href="https://ndusbpos-my.sharepoint.com/:w:/r/personal/landon_schlangen_ndus_edu/_layouts/15/Doc.aspx?sourcedoc=%7Bdb58a83f-2171-44f7-9659-4c92814fe567%7D&action=view&wdAccPdf=0"
-            target="_blank"
-          >
-            <Button>My Resume</Button>
-          </a>
-        </motion.div> */}
+      <Box
+        d="flex"
+        justifyContent="center"
+        fontSize="2.75rem"
+        color="Headline"
+        py="60px"
+        fontFamily="Montserrat"
+        className={css`
+          @media only screen and (max-width: 660px) {
+            font-size: 2rem;
+          }
+        `}
+      >
+        Quick Overview of Skills
+      </Box>
+      <Box mb="40px">
+        <StatsBar label="React" stat={95} />
+
+        <StatsBar label="Laravel" stat={90} />
+        <StatsBar label="SQL" stat={85} />
+        <StatsBar label="NodeJs/Express" stat={85} />
+        <StatsBar label="Angular" stat={85} />
+        <StatsBar label="Django" stat={80} />
+      </Box>
+
+      <Box
+        d="flex"
+        justifyContent="center"
+        fontSize="2.75rem"
+        color="Headline"
+        pt="60px"
+        pb="30px"
+        fontFamily="Montserrat"
+        className={css`
+          @media only screen and (max-width: 660px) {
+            font-size: 2rem;
+          }
+        `}
+      >
+        Business
+      </Box>
+      <Box
+        color="Paragraph"
+        fontFamily="Cardo"
+        fontSize="22px"
+        mx="10%"
+        lineHeight="35px"
+      >
+        I have recently started to youtube a little bit, and I would also love
+        to teach web development to anyone interested! If you are interested in
+        web development, don't hesitate to call or email me. I can do zoom calls
+        and we can go through anything I have listed on this website. You can
+        find my email and phone number in the footer of the page. If you are
+        seeing my website because I applied for a job, then I would still gladly
+        accept the job. (last updated Sep. 2020)
+      </Box>
+      <Box mx="10%" mt="30px">
+        <Box color="Paragraph" fontSize="29px">
+          My Channel
+        </Box>
+        <Box>
+          <YouTuber
+            name="Landon Schlangen"
+            photo={photos.profilepic}
+            link="https://www.youtube.com/channel/UC4oRFTHw71_CBSHAcCRmV6w"
+          />
+        </Box>
+      </Box>
+
+      <Box justifyContent="center" d="flex" mt="80px">
+        <a
+          href="https://ndusbpos-my.sharepoint.com/:w:/r/personal/landon_schlangen_ndus_edu/_layouts/15/Doc.aspx?sourcedoc=%7Bdb58a83f-2171-44f7-9659-4c92814fe567%7D&action=view&wdAccPdf=0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>My Resume</Button>
+        </a>
       </Box>
     </div>
   );
