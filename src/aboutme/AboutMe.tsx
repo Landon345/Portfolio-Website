@@ -224,7 +224,6 @@ function AboutMe() {
       </Box>
       <Box mb="40px">
         <StatsBar label="React" stat={95} />
-
         <StatsBar label="Laravel" stat={90} />
         <StatsBar label="SQL" stat={85} />
         <StatsBar label="NodeJs/Express" stat={85} />
@@ -278,7 +277,7 @@ function AboutMe() {
 
       <Box justifyContent="center" d="flex" mt="80px">
         <a
-          href="https://ndusbpos-my.sharepoint.com/:w:/r/personal/landon_schlangen_ndus_edu/_layouts/15/Doc.aspx?sourcedoc=%7Bdb58a83f-2171-44f7-9659-4c92814fe567%7D&action=view&wdAccPdf=0"
+          href="https://docs.google.com/document/d/16lTZe7zoUcdg-e7vh3wiy1q6JUGV7RB64FacUqSgRrQ/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
