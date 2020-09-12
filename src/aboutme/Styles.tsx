@@ -27,15 +27,16 @@ export const SingleStatContainer = styled.div`
   grid-template-columns: 1fr 5fr;
   text-align: left;
   margin: 5px 5% 5px 100px;
-  padding: 30px 0px;
+  padding: 15px 0px;
   font-size: 30px;
   @media only screen and (max-width: 558px) {
-    font-size: 18px;
+    font-size: 22px;
+    padding: 8px 0px;
   }
   @media only screen and (max-width: 1500px) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     margin: 5px 5% 5px 5%;
   }
 `;

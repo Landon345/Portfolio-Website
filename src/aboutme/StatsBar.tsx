@@ -15,8 +15,11 @@ const StatsBar: React.FC<StatsBarProps> = ({ label, stat }) => {
       <VisibilitySensor>
         {({ isVisible }) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
+            initial={{ opacity: 0.0 }}
+            animate={{
+              opacity: isVisible ? 1 : 0.1,
+              scale: isVisible ? 1 : 0.95,
+            }}
             transition={{ delay: 0, duration: 0.25 }}
           >
             <SingleStatContainer>

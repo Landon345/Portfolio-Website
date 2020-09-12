@@ -212,7 +212,8 @@ function AboutMe() {
         justifyContent="center"
         fontSize="2.75rem"
         color="Headline"
-        py="60px"
+        pt="60px"
+        pb="30px"
         fontFamily="Montserrat"
         className={css`
           @media only screen and (max-width: 660px) {
@@ -258,9 +259,9 @@ function AboutMe() {
         to teach web development to anyone interested! If you are interested in
         web development, don't hesitate to call or email me. I can do zoom calls
         and we can go through anything I have listed on this website. You can
-        find my email and phone number in the footer of the page. If you are
-        seeing my website because I applied for a job, then I would still gladly
-        accept the job. (last updated Sep. 2020)
+        find my email and phone number in the footer of the page. I am also
+        happy to take a look at any job offers that come my way. (last updated
+        Sep. 2020)
       </Box>
       <Box mx="10%" mt="30px">
         <Box color="Paragraph" fontSize="29px">
