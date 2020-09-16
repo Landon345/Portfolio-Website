@@ -7,7 +7,7 @@ interface Props {}
 
 const Footer: React.FC = (props: Props) => {
   return (
-    <Box mt="40px">
+    <Box>
       <Hr />
       <Box
         d="flex"

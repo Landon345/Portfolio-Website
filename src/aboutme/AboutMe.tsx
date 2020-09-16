@@ -10,7 +10,7 @@ import StatsBar from "src/aboutme/StatsBar";
 
 function AboutMe() {
   return (
-    <div>
+    <Box mb="40px">
       <Box
         d="flex"
         justifyContent="center"
@@ -97,6 +97,7 @@ function AboutMe() {
           >
             Creators I follow
           </Box>
+
           <CreatorList>
             <YouTuber
               name="Leigh Halliday"
@@ -285,7 +286,7 @@ function AboutMe() {
           <Button>My Resume</Button>
         </a>
       </Box>
-    </div>
+    </Box>
   );
 }
 

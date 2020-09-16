@@ -28,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const MEDIA_QUERIES = {
     // xs: '(max-width: 470px)',
-    small: "(max-width: 920px)",
-    large: "(min-width: 921px)",
+    small: "(max-width: 970px)",
+    large: "(min-width: 971px)",
   };
   const matches = useMedia({ queries: MEDIA_QUERIES });
 
@@ -107,6 +107,9 @@ const Navbar: React.FC<NavbarProps> = ({
               </Link>
               <Link to="/projects">
                 <NavbarLink>Projects</NavbarLink>
+              </Link>
+              <Link to="/blog">
+                <NavbarLink>Blog</NavbarLink>
               </Link>
             </Box>
 
@@ -201,6 +204,11 @@ const Navbar: React.FC<NavbarProps> = ({
               <Box>
                 <Link to="/projects">
                   <SidebarLink>Projects</SidebarLink>
+                </Link>
+              </Box>
+              <Box>
+                <Link to="/blog">
+                  <SidebarLink>Blog</SidebarLink>
                 </Link>
               </Box>
 

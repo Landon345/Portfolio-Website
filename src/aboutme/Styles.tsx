@@ -27,11 +27,11 @@ export const SingleStatContainer = styled.div`
   grid-template-columns: 1fr 5fr;
   text-align: left;
   margin: 5px 5% 5px 100px;
-  padding: 15px 0px;
+  padding: 15px 3px;
   font-size: 30px;
   @media only screen and (max-width: 558px) {
     font-size: 22px;
-    padding: 8px 0px;
+    padding: 8px 3px;
   }
   @media only screen and (max-width: 1500px) {
     display: grid;
@@ -51,5 +51,7 @@ export const StatBar = styled.div<statbarProps>`
 export const StatBarWhole = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.BackgroundHover};
+  border: 1px solid ${({ theme }) => theme.colors.Tertiary};
+  /* box-shadow: 1px 1px 2px 1px #978792f0; */
   border-radius: 30px;
 `;

@@ -15,19 +15,24 @@ const StatsBar: React.FC<StatsBarProps> = ({ label, stat }) => {
       <VisibilitySensor>
         {({ isVisible }) => (
           <motion.div
-            initial={{ opacity: 0.0 }}
+            initial={{ opacity: 0.3 }}
             animate={{
-              opacity: isVisible ? 1 : 0.1,
-              scale: isVisible ? 1 : 0.95,
+              opacity: isVisible ? 1 : 0.3,
             }}
-            transition={{ delay: 0, duration: 0.25 }}
+            transition={{ delay: 0.1, duration: 0.35 }}
           >
             <SingleStatContainer>
               <Box color="Paragraph">{label}</Box>
               <StatBarWhole>
-                <StatBar width={stat}>
-                  <Box ml="15px">{stat}/100</Box>
-                </StatBar>
+                <motion.div
+                  initial={{ x: "-100%" }}
+                  animate={{ x: isVisible ? 0 : "-100%" }}
+                  transition={{ delay: 0, duration: 0.25 }}
+                >
+                  <StatBar width={stat}>
+                    <Box ml="15px">{stat}/100</Box>
+                  </StatBar>
+                </motion.div>
               </StatBarWhole>
             </SingleStatContainer>
           </motion.div>

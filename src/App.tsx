@@ -15,6 +15,9 @@ import {
 import Navbar from "src/navbar/Navbar";
 import Footer from "src/footer/Footer";
 import Projects from "src/projects/Projects";
+import Blog from "src/blog/Blog";
+import Post1 from "src/blog/posts/Post1";
+import Post2 from "src/blog/posts/Post2";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -63,6 +66,23 @@ function App() {
             <Route path="/projects" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
                 <Projects />
+              </Box>
+            </Route>
+            <Route path="/blog" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <Blog />
+              </Box>
+            </Route>
+
+            {/* Blog Routes */}
+            <Route path="/blog/1" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <Post1 />
+              </Box>
+            </Route>
+            <Route path="/blog/2" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <Post2 />
               </Box>
             </Route>
           </Switch>
