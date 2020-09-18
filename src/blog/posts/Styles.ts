@@ -1,0 +1,56 @@
+import styled from "src/styled/styled";
+
+export const PostContainer = styled.div`
+  margin: 100px 25%;
+
+  background-color: ${({ theme }) => theme.colors.Background};
+  @media (max-width: 1600px) {
+    margin: 100px 20%;
+  }
+  @media (max-width: 1200px) {
+    margin: 100px 10%;
+  }
+`;
+
+export const Header = styled.h1`
+  color: ${({ theme }) => theme.colors.Headline};
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 60px;
+  font-family: Montserrat;
+`;
+
+export const Para = styled.p`
+  color: ${({ theme }) => theme.colors.Paragraph};
+  font-size: 22px;
+  text-align: left;
+  line-height: 2.5;
+  margin-top: 20px;
+  text-indent: 40px;
+  font-family: Cardo;
+`;
+
+export const Terminal = styled.div`
+  background-color: ${({ theme }) => theme.colors.CardBackground};
+  color: ${({ theme }) => theme.colors.CardParagraph};
+  text-align: left;
+  line-height: 2;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: Monaco;
+`;
+
+export const SubHeader = styled.h3`
+  color: ${({ theme }) => theme.colors.Paragraph};
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 2;
+  margin-top: 50px;
+  font-family: Montserrat;
+`;

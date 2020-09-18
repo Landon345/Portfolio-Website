@@ -16,7 +16,7 @@ import Navbar from "src/navbar/Navbar";
 import Footer from "src/footer/Footer";
 import Projects from "src/projects/Projects";
 import Blog from "src/blog/Blog";
-import Post1 from "src/blog/posts/Post1";
+import ReactWithTypescript from "src/blog/posts/ReactWithTypescript";
 import Post2 from "src/blog/posts/Post2";
 
 function App() {
@@ -75,9 +75,9 @@ function App() {
             </Route>
 
             {/* Blog Routes */}
-            <Route path="/blog/1" exact>
+            <Route path="/blog/set-up-react-project-with-typescript" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
-                <Post1 />
+                <ReactWithTypescript />
               </Box>
             </Route>
             <Route path="/blog/2" exact>

@@ -31,6 +31,11 @@ const Footer: React.FC = (props: Props) => {
             Projects
           </Box>
         </Link>
+        <Link to="/blog">
+          <Box color="Paragraph" px="5px">
+            Blog
+          </Box>
+        </Link>
 
         <Box color="Paragraph" px="5px">
           Themes From{" "}

@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box } from "@chakra-ui/core";
 import PostCard from "src/blog/PostCard";
+import { PostData } from "src/blog/PostData";
 
 interface Props {}
 
 const Blog: React.FC = (props: Props) => {
-  const [posts, setPosts] = useState([
-    { id: 1, title: "Post1", description: "I talk about basketball" },
-    { id: 2, title: "Post2", description: "I talk about coding" },
-  ]);
   return (
     <Box textAlign="center">
-      {posts.map((post) => (
+      {PostData.Posts.map((post) => (
         <PostCard
-          key={post.id}
-          id={post.id}
+          key={post.slug}
+          slug={post.slug}
           title={post.title}
           description={post.description}
+          tags={post.hashTags}
         />
       ))}
     </Box>
