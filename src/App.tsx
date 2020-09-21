@@ -15,6 +15,9 @@ import {
 import Navbar from "src/navbar/Navbar";
 import Footer from "src/footer/Footer";
 import Projects from "src/projects/Projects";
+import Blog from "src/blog/Blog";
+import ReactWithTypescript from "src/blog/posts/ReactWithTypescript";
+import HostWebsite from "src/blog/posts/HostWebsite";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -63,6 +66,23 @@ function App() {
             <Route path="/projects" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
                 <Projects />
+              </Box>
+            </Route>
+            <Route path="/blog" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <Blog />
+              </Box>
+            </Route>
+
+            {/* Blog Routes */}
+            <Route path="/blog/set-up-react-project-with-typescript" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <ReactWithTypescript />
+              </Box>
+            </Route>
+            <Route path="/blog/host-a-website" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <HostWebsite />
               </Box>
             </Route>
           </Switch>

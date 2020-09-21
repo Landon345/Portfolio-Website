@@ -7,7 +7,7 @@ interface Props {}
 
 const Footer: React.FC = (props: Props) => {
   return (
-    <Box mt="40px">
+    <Box>
       <Hr />
       <Box
         d="flex"
@@ -29,6 +29,11 @@ const Footer: React.FC = (props: Props) => {
         <Link to="/projects">
           <Box color="Paragraph" px="5px">
             Projects
+          </Box>
+        </Link>
+        <Link to="/blog">
+          <Box color="Paragraph" px="5px">
+            Blog
           </Box>
         </Link>
 

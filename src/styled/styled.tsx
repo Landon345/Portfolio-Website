@@ -13,6 +13,13 @@ type Theme = {
     Hr: string;
     ImageHover: string;
 
+    CardBackground: string;
+    CardHeadline: string;
+    CardParagraph: string;
+    CardHighlight: string;
+    CardTagBackground: string;
+    CardTagText: string;
+
     Stroke: string;
     Main: string;
     Highlight: string;

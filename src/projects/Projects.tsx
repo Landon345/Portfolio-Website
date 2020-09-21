@@ -11,7 +11,7 @@ interface Props {}
 const Projects: React.FC = (props: Props) => {
   return (
     <>
-      <Box mx="5%">
+      <Box mx="5%" mb="40px">
         {/* Featured */}
         <Box d="flex" justifyContent="space-between" flexWrap="wrap">
           <Box fontSize="40px" color="Headline" mt="60px">
