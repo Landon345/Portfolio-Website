@@ -17,7 +17,7 @@ import Footer from "src/footer/Footer";
 import Projects from "src/projects/Projects";
 import Blog from "src/blog/Blog";
 import ReactWithTypescript from "src/blog/posts/ReactWithTypescript";
-import Post2 from "src/blog/posts/Post2";
+import HostWebsite from "src/blog/posts/HostWebsite";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -80,9 +80,9 @@ function App() {
                 <ReactWithTypescript />
               </Box>
             </Route>
-            <Route path="/blog/2" exact>
+            <Route path="/blog/host-a-website" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
-                <Post2 />
+                <HostWebsite />
               </Box>
             </Route>
           </Switch>

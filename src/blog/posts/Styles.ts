@@ -54,3 +54,9 @@ export const SubHeader = styled.h3`
   margin-top: 50px;
   font-family: Montserrat;
 `;
+
+export const PostImage = styled.img`
+  object-fit: contain;
+  width: 50%;
+  margin: 10px 25%;
+`;

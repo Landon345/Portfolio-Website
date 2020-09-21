@@ -1,6 +1,4 @@
 import React from "react";
-import { Box } from "@chakra-ui/core";
-// import PostTemplate from "src/blog/posts/PostTemplate";
 import { ReactWithTypescriptPost } from "src/blog/PostData";
 import {
   PostContainer,
@@ -15,7 +13,6 @@ type ReactWithTypescriptProps = {};
 const ReactWithTypescript: React.FC<ReactWithTypescriptProps> = () => {
   return (
     <PostContainer>
-      {/* <PostTemplate post={ReactWithTypescriptPost} /> */}
       <Header>{ReactWithTypescriptPost.headers.main}</Header>
       <SubHeader>{ReactWithTypescriptPost.description}</SubHeader>
       <Para>{ReactWithTypescriptPost.paragraphs.main}</Para>
