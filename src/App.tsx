@@ -18,6 +18,7 @@ import Projects from "src/projects/Projects";
 import Blog from "src/blog/Blog";
 import ReactWithTypescript from "src/blog/posts/ReactWithTypescript";
 import HostWebsite from "src/blog/posts/HostWebsite";
+import TopExtensions from "src/blog/posts/TopExtensions";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -83,6 +84,11 @@ function App() {
             <Route path="/blog/host-a-website" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
                 <HostWebsite />
+              </Box>
+            </Route>
+            <Route path="/blog/top-vs-code-extensions" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <TopExtensions />
               </Box>
             </Route>
           </Switch>

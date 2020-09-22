@@ -30,13 +30,13 @@ const HostWebsite: React.FC<HostWebsiteProps> = () => {
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase4}</Para>
       <Terminal>sudo npm install -g firebase-tools</Terminal>
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase5}</Para>
-      <Terminal>Firebase login</Terminal>
+      <Terminal>firebase login</Terminal>
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase6}</Para>
-      <Terminal>Firebase init</Terminal>
+      <Terminal>firebase init</Terminal>
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase7}</Para>
-      <Terminal>Npm run build</Terminal>
+      <Terminal>npm run build</Terminal>
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase8}</Para>
-      <Terminal>Firebase deploy</Terminal>
+      <Terminal>firebase deploy</Terminal>
       <Para>{HostWebsitePost.paragraphs.netlifyFirebase9}</Para>
       <SubHeader>{HostWebsitePost.headers.domain}</SubHeader>
       <Para>{HostWebsitePost.paragraphs.domain}</Para>

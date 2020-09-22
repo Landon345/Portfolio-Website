@@ -25,6 +25,13 @@ export const PostData: PostsArray = {
       description: "It is super duper simple to host a website on Netlify.",
       hashTags: ["How to", "Web Dev"],
     },
+    {
+      slug: "top-vs-code-extensions",
+      title: "Top VS Code Extensions",
+      description:
+        "My list of top 10 visual studio code extensions. There are 5 general and 5 specific extensions.",
+      hashTags: ["Top", "Web Dev"],
+    },
   ],
 };
 
@@ -51,7 +58,7 @@ export const ReactWithTypescriptPost: singlePost = {
     second:
       "As we know, TypeScript is just a superset of JavaScript. This means that even if we don’t really know TypeScript very well, our React project will still run great whether we use or don’t use the features of TypeScript. We don’t even need to install another compiler to have our project run flawlessly. My advice would be to always set up our React projects to use TypeScript. ",
     third:
-      "So there we have it, it is pretty simple to do. In the future, I expect React to default to using TypeScript just like Angular. A couple great advantages that using TypeScript brings is the ability to use absolute routes to import our different components. This is done by going to the tsconfig file and adding in a rule of BaseUrl: “.”. This way, instead of doing “../components/button”, we can do “src/components/button”. As our component tree gets larger and larger, it becomes way better to use the second option (absolute routes). Also, TypeScript provides us with the tools needed to add great type checking and intellisense to our project, so that ultimately, we make fewer mistakes and minimize our debug time when writing code.",
+      "So there we have it, it is pretty simple to do. In the future, I expect React to default to using TypeScript just like Angular. A great advantage that using TypeScript brings is the ability to use absolute routes to import our different components. This is done by going to the tsconfig file and adding in a rule of BaseUrl: “.”. This way, instead of doing “../components/button”, we can do “src/components/button”. As our component tree gets larger and larger, it becomes way better to use the second option (absolute routes). Also, TypeScript provides us with the tools needed to add great type checking and intellisense to our project, so that ultimately, we make fewer mistakes and minimize our debug time when writing code.",
   },
   photos: {},
   links: {},
@@ -103,4 +110,71 @@ export const HostWebsitePost: singlePost = {
   },
   links: {},
   hashTags: ["How to", "Web Dev"],
+};
+
+export const TopExtensionsPost: singlePost = {
+  title: "Top VS Code Extensions",
+  description:
+    "My list of top 10 visual studio code extensions. There are 5 general and 5 specific extensions.",
+  headers: {
+    why: "Why we use vs code extensions",
+    general: "Top 5 General Extensions",
+    prettier: "1. Prettier",
+    bracket: "2. Bracket Pair Colorizer 2",
+    liveServer: "3. Live Server",
+    liveShare: "4. Live Share",
+    colorHighlight: "5. Color Highlight",
+    specific: "Top 5 Specific VS Code Extensions",
+    eslint: "1. ES Lint",
+    reactSnippets: "2. ES7 React/Redux/GraphQL/React-Native snippets",
+    vetur: "3. Vetur for Vue",
+    phpintel: "4. Php Intelephense",
+    jsSnippets: "5. JavaScript (ES6) Code Snippets",
+    conclusion: "Conclusion",
+  },
+  paragraphs: {
+    why:
+      "Visual Studio Code has got to be the best text editor readily available. It offers thousands of extensions that make our lives as developers easier. These extensions can help with almost every aspect of writing code.",
+    general:
+      "Here is the list of my top 5 more general vs code extensions that all developers can find useful in one way or another.",
+    prettier:
+      "We would not pretend to think that this was a vs code extensions article without Prettier would we? Anyway, Prettier is a code formatter that, when configured correctly, will format our code beautifully every time we save our files. This extension is simple, but very effective. It saves so much time because we don’t have to sit around making sure that our code is formatted to be readable. We can just let Prettier handle all of that for us.",
+    bracket:
+      "Bracket Pair Colorizer is a visual enhancement to vs code. When we write JavaScript, we make so many brackets (“{}”) that we don’t know which ones pair with other ones, and it can sometimes be a mess. With Bracket Pair Colorizer, it changes the colors of the brackets based on pairs. If a couple brackets are a pair, they will be the same color. No more questioning which brackets pair with each other.",
+    liveServer:
+      "Live Server adds functionality to vs code. It allows us to create any old html file, right click on it, and open it up in a browser. Then, whenever we make changes and save them, the browser automatically refreshes and shows our changes. This extension is super helpful for quick tests and simple projects. It is great for beginners who just want their code to run without any other hassel.",
+    liveShare:
+      "Live Share adds more functionality to vs code. We all know google docs, right? Well, this extension allows vs code to behave in a similar way to google docs. I’ll explain what I mean. When we share our google doc with someone and allow them to edit. We can see them making changes to our document in real time. This is what Live Share allows vs code to do. We can work with someone, on the same file, in real time, in completely different places from one another. All we have to do is a video chat, and it’s like that person is in the room with us. Live Share has got to be one of the best, if not the best, vs code extension out there. It is unique to vs code and is a programming collaboration miracle.",
+    colorHighlight:
+      "Color Highlight is a visual enhancement. It highlights our colors to what they are right inside our text editor. If we specified a color #0000ff, then this string of characters would be highlighted with blue. If we specified a color as rgb(255, 0, 0), then this would be highlighted with red. This extension is great for quickly visualizing which colors go where. It makes creating our color scheme easier and faster.",
+    specific:
+      "Here is the list of my top 5 specific vs code extensions that JavaScript, React, Vue, and Php developers can find useful in one way or another.",
+    eslint:
+      "ES Lint is a JavaScript linter for vs code. It tells us when we have syntax errors in our code. It will catch these errors without us even having to save. Each error will be underlined with a red squiggly line, and when we hover over it, it will give us a brief explanation of the error. Sometimes however, this extension can get annoying when it gives an error for something that we know will work. Most of these inconveniences can be dealt with by going to the ES Lint settings and turning some features off. For the most part though, ES Lint saves us time and energy when writing code.",
+    reactSnippets:
+      "Snippets are a great way to save time when writing repeatable code. This is where our ES7 React/Redux snippets come in handy. All we have to do is type 3-7 letters in the correct order, press enter or tab, and boom, we have a React template to jump into. There is no need to write the same import statements, class declarations, or default exports in every file. We can just let our wonderful extension do that for us.",
+    vetur:
+      "Vetur has a very specific use case. Basically, we only need Vetur if we are using Vue to develop our applications. When I say we need it, I mean it. Trying to develop in Vue without the Vetur extension would be an absolute nightmare. There are many reasons for this, but the most obvious one is that Vetur gives syntax highlighting to Vue. By default there isn’t syntax highlighting for files with the .vue file extension. It also has emmet, snippets, and linting built in.",
+    phpintel:
+      "If we are writing any kind of php code, it would be great if we had intelesense for which methods we can use. Php Intelephense gives us intelesense and also linting. Intelephense is a lot like ES Lint in the way it lints our php code. Laravel developers are a great beneficiary of this extension. Of course, there are other alternatives to this extension. One of which is PhpStorm, a completely different text editor to VS Code. It is a complete IDE for php. However, it is a tool that needs to be paid for, and I would rather not pay for such a tool. Php Intelephense is our next best option.",
+    jsSnippets:
+      "Some more snippets. Yes, that’s right, JavaScript snippets. These snippets allow us to write common JavaScript lines extremely fast. Some of these common lines include: import statements, export statements, console logs, function statements, and much more. It would take some time to learn all of the various letter combinations, but once learned, our JavaScript productivity should go through the roof.",
+    conclusion:
+      "VS code extensions are fantastic. Visual Studio code would not be where it is today if it weren’t for the great programmers who came up with these super useful extensions. Most of the extensions are open source which means that anyone can help make these extensions even better. I hope we all learned a little bit about which vs code extensions are the best, and that we can all appreciate the easier lives we have because of them.",
+  },
+  photos: {
+    prettier: blogPhotos.prettier,
+    bracket: blogPhotos.brackets,
+    liveServer: blogPhotos.liveServer,
+    liveShare: blogPhotos.liveShare,
+    colorHighlight: blogPhotos.colorHighlight,
+
+    eslint: blogPhotos.eslint,
+    reactSnippets: blogPhotos.reactSnippets,
+    vetur: blogPhotos.vetur,
+    phpintel: blogPhotos.phpintel,
+    jsSnippets: blogPhotos.jsSnippets,
+  },
+  links: {},
+  hashTags: ["Top", "Web Dev"],
 };

@@ -10,6 +10,9 @@ export const PostContainer = styled.div`
   @media (max-width: 1200px) {
     margin: 100px 10%;
   }
+  @media (max-width: 600px) {
+    margin: 100px 5%;
+  }
 `;
 
 export const Header = styled.h1`
@@ -59,4 +62,16 @@ export const PostImage = styled.img`
   object-fit: contain;
   width: 50%;
   margin: 10px 25%;
+  @media (max-width: 800px) {
+    width: 80%;
+    margin: 10px 10%;
+  }
+`;
+export const LongImage = styled.img`
+  object-fit: contain;
+  width: 100%;
+  margin: 15px 5%;
+  @media (max-width: 600px) {
+    margin: 10px 0%;
+  }
 `;
