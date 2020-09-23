@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HostWebsitePost } from "src/blog/PostData";
 import {
   PostContainer,
@@ -12,6 +12,9 @@ import {
 type HostWebsiteProps = {};
 
 const HostWebsite: React.FC<HostWebsiteProps> = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <PostContainer>
       <Header>{HostWebsitePost.title}</Header>

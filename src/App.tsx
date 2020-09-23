@@ -19,6 +19,7 @@ import Blog from "src/blog/Blog";
 import ReactWithTypescript from "src/blog/posts/ReactWithTypescript";
 import HostWebsite from "src/blog/posts/HostWebsite";
 import TopExtensions from "src/blog/posts/TopExtensions";
+import TopReactPackages from "src/blog/posts/TopReactPackages";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -89,6 +90,11 @@ function App() {
             <Route path="/blog/top-vs-code-extensions" exact>
               <Box onClick={() => setSidebar(false)} minH="85vh">
                 <TopExtensions />
+              </Box>
+            </Route>
+            <Route path="/blog/top-react-packages" exact>
+              <Box onClick={() => setSidebar(false)} minH="85vh">
+                <TopReactPackages />
               </Box>
             </Route>
           </Switch>
