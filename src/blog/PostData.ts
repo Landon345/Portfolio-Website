@@ -9,6 +9,7 @@ type Post = {
 
 type PostsArray = {
   Posts: Array<Post>;
+  allTags: Array<string>;
 };
 
 export const PostData: PostsArray = {
@@ -17,7 +18,7 @@ export const PostData: PostsArray = {
       slug: "set-up-react-project-with-typescript",
       title: "How to set up a React Project with typescript",
       description: "Typescript with React isn't as scary as you think.",
-      hashTags: ["How to", "React"],
+      hashTags: ["How to", "React", "Web Dev"],
     },
     {
       slug: "host-a-website",
@@ -32,7 +33,14 @@ export const PostData: PostsArray = {
         "My list of top 10 visual studio code extensions. There are 5 general and 5 specific extensions.",
       hashTags: ["Top", "Web Dev"],
     },
+    {
+      slug: "top-react-packages",
+      title: "Top React NPM Packages",
+      description: "My list of top 7 npm packages that I use with React.",
+      hashTags: ["Top", "React", "Web Dev"],
+    },
   ],
+  allTags: ["How to", "React", "Web Dev", "Top"],
 };
 
 type singlePost = {
@@ -42,6 +50,7 @@ type singlePost = {
   paragraphs: any;
   photos: any;
   links: any;
+  terminal: any;
   hashTags: Array<string>;
 };
 export const ReactWithTypescriptPost: singlePost = {
@@ -59,9 +68,21 @@ export const ReactWithTypescriptPost: singlePost = {
       "As we know, TypeScript is just a superset of JavaScript. This means that even if we don’t really know TypeScript very well, our React project will still run great whether we use or don’t use the features of TypeScript. We don’t even need to install another compiler to have our project run flawlessly. My advice would be to always set up our React projects to use TypeScript. ",
     third:
       "So there we have it, it is pretty simple to do. In the future, I expect React to default to using TypeScript just like Angular. A great advantage that using TypeScript brings is the ability to use absolute routes to import our different components. This is done by going to the tsconfig file and adding in a rule of BaseUrl: “.”. This way, instead of doing “../components/button”, we can do “src/components/button”. As our component tree gets larger and larger, it becomes way better to use the second option (absolute routes). Also, TypeScript provides us with the tools needed to add great type checking and intellisense to our project, so that ultimately, we make fewer mistakes and minimize our debug time when writing code.",
+    setup: "To set up our app with TypeScript - Run: ",
+    or: "Or",
+    add:
+      "If we have a React project that doesn’t use TypeScript right now, we can add TypeScript support by running:",
   },
   photos: {},
   links: {},
+  terminal: {
+    setup1: "npx create-react-app my-app --template typescript",
+    setup2: "yarn create react-app --template typescript",
+    add1:
+      "npm install --save typescript @types/node @types/react @types/react-dom @types/jest",
+    add2:
+      "yarn add typescript @types/node @types/react @types/react-dom @types/jest",
+  },
   hashTags: ["How to", "React"],
 };
 export const HostWebsitePost: singlePost = {
@@ -109,6 +130,7 @@ export const HostWebsitePost: singlePost = {
     firebaseAdd: blogPhotos.firebaseAdd,
   },
   links: {},
+  terminal: {},
   hashTags: ["How to", "Web Dev"],
 };
 
@@ -176,5 +198,64 @@ export const TopExtensionsPost: singlePost = {
     jsSnippets: blogPhotos.jsSnippets,
   },
   links: {},
+  terminal: {},
   hashTags: ["Top", "Web Dev"],
+};
+
+export const TopReactPackagesPost: singlePost = {
+  title: "My Top React NPM Packages",
+  description: "My list of top 7 npm packages that I use with React.",
+  headers: {
+    top: "The Top 7 NPM packages that I use",
+    emotion: "1. Emotion",
+    chakra: "2. Chakra",
+    router: "3. React Router",
+    momentOrDay: "4. Moment or DayJs",
+    framerMotion: "5. Framer Motion",
+    ghpages: "6. GitHub Pages",
+    reactQuery: "7. React Query",
+    conclusion: "Conclusion",
+  },
+  paragraphs: {
+    top:
+      "There are so many npm packages out there. Some packages are specific to React while others are just general purpose. Today, I am listing my top 7 npm packages that I use with React.",
+    emotion:
+      "Emotion is a library that specializes in making it easy to write css styles with JavaScript. The next package, Chakra, makes use of emotion and integrates very well with it. Emotion and Chakra should be all we need to style our webpage.",
+    chakra:
+      "Similar to Material-ui, Chakra-ui is a great way to style our React components. The reason I like to use it instead of Material-ui is because it is much more flexible with custom styling, and it still brings some awesome out of the box styled components.",
+    router:
+      "There are a few great ways to handle routing in React, but the best way has got to be with React Router. It provides a clean solution to routing within a React application.",
+    momentOrDay:
+      "Moment and DayJs have got to be the two most popular date libraries available. They both are super simple to use and help tremendously when working with any kind of dates. They are also eerily similar. If we know how to use one of these date packages, then we certainly know the other one as well. One thing to keep in mind, however, is that DayJs is 515 kB while Moment is 4.19 MB. ",
+    framerMotion:
+      "Framer Motion is by far my favorite animation library. I love using Framer Motion because it is simple to use and lets us make our own animations easily. All we have to do is wrap a section in our HTML we want to animate with <motion.div></motion.div>, and we are set to start adding animations to that section.",
+    ghpages:
+      "Github pages allow us to host our project on GitHub. Just follow a few steps, and just like that, we have a project hosted,  ready to be seen by all.",
+    reactQuery:
+      "Geez, I almost forgot about react-query. This wonderful npm package managed by Tanner Linsley helps us manage our api fetching operations. It provides us with the tools we need to refetch from our api, cache our data, update our data, and have a loading state and error state. This package is one of the most important packages on this list. React Router is the most important.",
+    conclusion:
+      "Whether we are just getting started with React, or we are seasoned pros, these React packages are sure to help. I cannot even imagine trying to do the things I do in React without the help of these wonderful libraries. Thank you to all the programmers who made these packages a reality!",
+  },
+  photos: {},
+  links: {
+    emotion: "https://emotion.sh/docs/introduction",
+    chakra: "https://chakra-ui.com/getting-started",
+    router: "https://reactrouter.com/web/guides/quick-start",
+    momentOrDay: "https://day.js.org/docs/en/display/format",
+    framerMotion: "https://www.framer.com/api/motion/",
+    ghpages: "https://www.npmjs.com/package/gh-pages",
+    reactQuery: "https://react-query.tanstack.com/docs/overview",
+  },
+  terminal: {
+    emotion: "npm i emotion",
+    chakra:
+      "npm i @chakra-ui/core @emotion/core @emotion/styled emotion-theming",
+    router: "npm i react-router-dom",
+    moment: "npm i moment",
+    day: "npm i dayjs",
+    framerMotion: "npm i framer-motion",
+    ghpages: "npm i gh-pages",
+    reactQuery: "npm i react-query",
+  },
+  hashTags: ["Top", "React", "Web Dev"],
 };

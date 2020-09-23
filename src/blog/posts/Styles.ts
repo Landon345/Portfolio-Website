@@ -44,7 +44,7 @@ export const Terminal = styled.div`
   border-radius: 10px;
   padding: 40px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-family: Monaco;
 `;
 

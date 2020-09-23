@@ -19,11 +19,11 @@ const PostCard: React.FC<PostCardProps> = ({
   tags,
 }) => {
   return (
-    <Box bg="CardBackground" m="5%" p="30px" rounded="10px">
-      <Box color="CardHeadline" fontSize="40px" my="30px">
+    <Box bg="CardBackground" m="2% 5%" p="15px" rounded="10px">
+      <Box color="CardHeadline" fontSize="30px" my="15px">
         {title}
       </Box>
-      <Box color="CardParagraph" fontSize="22px" my="20px">
+      <Box color="CardParagraph" fontSize="18px" my="12px">
         {description}
       </Box>
       {image && (
@@ -33,7 +33,7 @@ const PostCard: React.FC<PostCardProps> = ({
       )}
       <Box
         color="CardTagBackground"
-        fontSize="large"
+        fontSize="20px"
         className={css`
           :hover {
             text-decoration: underline;
@@ -47,9 +47,9 @@ const PostCard: React.FC<PostCardProps> = ({
           <Box
             bg="CardTagBackground"
             color="CardTagText"
-            padding="10px"
-            m="10px"
-            borderRadius="10px"
+            padding="3px 10px"
+            m="6px"
+            borderRadius="5px"
           >
             {tag}
           </Box>

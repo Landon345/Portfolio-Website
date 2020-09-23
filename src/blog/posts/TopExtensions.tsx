@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TopExtensionsPost } from "src/blog/PostData";
 import {
   PostContainer,
@@ -12,6 +12,9 @@ type TopExtensionsProps = {};
 
 const TopExtensions: React.FC<TopExtensionsProps> = () => {
   const { title, headers, paragraphs, photos } = TopExtensionsPost;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <PostContainer>
       <Header>{title}</Header>
