@@ -11,7 +11,15 @@ interface Props {}
 const Projects: React.FC = (props: Props) => {
   return (
     <>
-      <Box mx="5%" mb="40px">
+      <Box
+        mx="5%"
+        mb="40px"
+        className={css`
+          @media only screen and (max-width: 660px) {
+            margin: 0px 2% 40px 2%;
+          }
+        `}
+      >
         {/* Featured */}
         <Box d="flex" justifyContent="space-between" flexWrap="wrap">
           <Box fontSize="40px" color="Headline" mt="60px">
@@ -51,13 +59,7 @@ const Projects: React.FC = (props: Props) => {
             github="https://github.com/Landon345/Tabsystem"
             video="https://youtu.be/Ly9c_APCj5U"
           />
-          <Project
-            description="I am starting to get into graphql and nextjs. I followed a Leigh Halliday tutorial for this one."
-            images={[photos.GraphQLResumeCover, photos.GraphqlResume]}
-            title="GraphQl Resume"
-            github="https://github.com/Landon345/next-js-graphql-resume"
-            hosted="https://next-js-graphql-resume.vercel.app/"
-          />
+
           <Project
             description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
             images={[photos.TradingPractice]}
@@ -145,13 +147,6 @@ const Projects: React.FC = (props: Props) => {
         </Box>
         <ProjectsGrid>
           <Project
-            description="This project is full stack using firebase. I added a way to delete comments and posts when signed in."
-            images={[photos.instagramCover, photos.instagram]}
-            title="Instagram clone"
-            github="https://github.com/Landon345/instagram-clone"
-            hosted="https://instagram-clone-3b95e.web.app/"
-          />
-          <Project
             description="Used a movies api for the data."
             images={[photos.netflixCover, photos.netflix]}
             title="Netflix clone"
@@ -165,13 +160,7 @@ const Projects: React.FC = (props: Props) => {
             github="https://github.com/Landon345/amazon-clone"
             hosted="https://clone-f7d52.web.app"
           />
-          <Project
-            description="I added a smooth scroll to bottom of the chats page."
-            images={[photos.tinderCover, photos.tinder]}
-            title="Tinder clone"
-            github="https://github.com/Landon345/tinder-clone"
-            hosted="https://tinder-clone-7a91a.web.app"
-          />
+
           <Project
             description="Just a good looking clone that utilizes Material-ui"
             images={[photos.youTubeCover, photos.youTube]}

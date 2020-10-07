@@ -10,7 +10,7 @@ export const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.Headline};
   border-radius: 30px;
   @media only screen and (max-width: 768px) {
-    padding: 5px 15px;
+    padding: 7px 20px;
   }
   &:hover {
     background-color: ${({ theme }) => theme.colors.ButtonHover};

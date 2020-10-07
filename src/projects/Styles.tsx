@@ -20,8 +20,9 @@ export const ProjectsGrid = styled.div`
   justify-items: center;
   margin-top: 30px;
 
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 660px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-row-gap: 30px;
   }
 `;
 
@@ -81,6 +82,7 @@ export const OverlayButton = styled.button`
   border-radius: 30px;
   @media only screen and (max-width: 670px) {
     padding: 5px 15px;
+    font-size: 12px;
   }
   &:hover {
     background-color: ${({ theme }) => theme.colors.ButtonHover};

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Icon } from "@chakra-ui/core";
+import { css } from "emotion";
 import {
   OverlayContainer,
   OverlayImage,
@@ -62,7 +63,18 @@ const Project: React.FC<ProjectProps> = ({
                   </OverlayA>
                 )}
               </Box>
-              <Box color="paragraph" fontFamily="Cardo" fontSize="22px" mx="3%">
+              <Box
+                color="paragraph"
+                fontFamily="Cardo"
+                fontSize="22px"
+                mx="3%"
+                className={css`
+                  @media only screen and (max-width: 660px) {
+                    font-size: 18px;
+                    margin: 0px 1%;
+                  }
+                `}
+              >
                 {description}
               </Box>
             </OverlayDescription>
@@ -74,9 +86,15 @@ const Project: React.FC<ProjectProps> = ({
           <Icon
             name="arrow-forward"
             color="Paragraph"
-            size="23px"
+            size="30px"
             onClick={rotateImage}
             cursor="pointer"
+            className={css`
+              @media only screen and (max-width: 660px) {
+                height: 35px;
+                width: 35px;
+              }
+            `}
           />
         </Box>
       )}

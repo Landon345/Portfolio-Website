@@ -258,34 +258,37 @@ function AboutMe() {
       >
         I have recently started to youtube a little bit, and I would also love
         to teach web development to anyone interested! If you are interested in
-        web development, don't hesitate to call or email me. I can do zoom calls
-        and we can go through anything I have listed on this website. You can
-        find my email and phone number in the footer of the page. I am also
+        web development, don't hesitate to call or email me. I can do zoom
+        calls, and we can go through anything I have listed on this website. You
+        can find my email and phone number in the footer of the page. I am also
         happy to take a look at any job offers that come my way. (last updated
-        Sep. 2020)
+        Oct. 2020)
       </Box>
       <Box mx="10%" mt="30px">
         <Box color="Paragraph" fontSize="29px">
           My Channel
         </Box>
-        <Box>
-          <YouTuber
-            name="Landon Schlangen"
-            photo={photos.profilepic}
-            link="https://www.youtube.com/channel/UC4oRFTHw71_CBSHAcCRmV6w"
-          />
+        <Box d="flex" flexWrap="wrap" alignItems="center">
+          <Box>
+            <YouTuber
+              name="Landon Schlangen"
+              photo={photos.profilepic}
+              link="https://www.youtube.com/channel/UC4oRFTHw71_CBSHAcCRmV6w"
+            />
+          </Box>
+          <Box ml="100px">
+            <a
+              href="https://docs.google.com/document/d/16lTZe7zoUcdg-e7vh3wiy1q6JUGV7RB64FacUqSgRrQ/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>My Resume</Button>
+            </a>
+          </Box>
         </Box>
       </Box>
 
-      <Box justifyContent="center" d="flex" mt="80px">
-        <a
-          href="https://docs.google.com/document/d/16lTZe7zoUcdg-e7vh3wiy1q6JUGV7RB64FacUqSgRrQ/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button>My Resume</Button>
-        </a>
-      </Box>
+      <Box justifyContent="center" d="flex" mt="40px"></Box>
     </Box>
   );
 }
