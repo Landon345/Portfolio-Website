@@ -227,8 +227,8 @@ function AboutMe() {
       <Box mb="40px">
         <StatsBar label="React" stat={95} />
         <StatsBar label="Laravel" stat={90} />
+        <StatsBar label="NodeJs/Express" stat={90} />
         <StatsBar label="SQL" stat={85} />
-        <StatsBar label="NodeJs/Express" stat={85} />
         <StatsBar label="Angular" stat={85} />
         <StatsBar label="Django" stat={80} />
       </Box>

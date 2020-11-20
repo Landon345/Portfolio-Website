@@ -62,6 +62,15 @@ import WhatCanICookRecipes from "src/assets/WhatCanICookRecipes.jpg";
 import GraphQLResumeCover from "src/assets/GraphQLResumeCover.jpg";
 import profilepic from "src/assets/profilepic.jpg";
 
+import Orion from "src/assets/Orion.png";
+import OrionAccounts from "src/assets/OrionAccounts.png";
+import OrionDashboard from "src/assets/OrionDashboard.png";
+import OrionHome from "src/assets/OrionHome.png";
+import OrionInfo from "src/assets/OrionInfo.png";
+import OrionOpen from "src/assets/OrionOpen.png";
+import OrionRegister from "src/assets/OrionRegister.png";
+import OrionSteps from "src/assets/OrionSteps.png";
+
 export {
   profilepic,
   tabsystemTabs,
@@ -124,4 +133,12 @@ export {
   WhatCanICookHome,
   WhatCanICookRecipes,
   GraphQLResumeCover,
+  OrionAccounts,
+  OrionDashboard,
+  OrionHome,
+  OrionInfo,
+  OrionOpen,
+  OrionRegister,
+  OrionSteps,
+  Orion,
 };

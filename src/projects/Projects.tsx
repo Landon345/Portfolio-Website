@@ -59,6 +59,21 @@ const Projects: React.FC = (props: Props) => {
             github="https://github.com/Landon345/Tabsystem"
             video="https://youtu.be/Ly9c_APCj5U"
           />
+          <Project
+            description="An online banking app named Orion that is very similar to Ally Bank. Made with React, Node, Express, and Postgres"
+            images={[
+              photos.Orion,
+              photos.OrionHome,
+              photos.OrionAccounts,
+              photos.OrionSteps,
+              photos.OrionOpen,
+              photos.OrionInfo,
+              photos.OrionRegister,
+              photos.OrionDashboard,
+            ]}
+            title="Orion Bank"
+            github="https://github.com/Landon345/online-bank"
+          />
 
           <Project
             description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
