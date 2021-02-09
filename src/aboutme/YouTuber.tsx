@@ -11,7 +11,7 @@ type YouTuberProps = {
 
 const YouTuber: React.FC<YouTuberProps> = ({ name, photo, link }) => {
   return (
-    <Creator href={link} target="_blank">
+    <Creator href={link} target="_blank" rel="noopener noreferrer">
       <RoundImage src={photo} alt="" height="50px" />{" "}
       <Box color="Paragraph" ml="25px">
         {name}

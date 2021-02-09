@@ -74,6 +74,13 @@ const Projects: React.FC = (props: Props) => {
             title="Orion Bank"
             github="https://github.com/Landon345/online-bank"
           />
+          <Project
+            description="A House viewer that I made with the help of Leigh Halliday's Next-Level-JS Course."
+            images={[photos.HouseList, photos.OneHouse, photos.AddHouse]}
+            title="House Viewer"
+            hosted="https://leigh-next-js-house-course.vercel.app/"
+            github="https://github.com/Landon345/leigh-nextJS-house-course"
+          />
 
           <Project
             description="Trading practice is built with React, Nodejs, and Postgresql. It was a group project for CSCI 366 (database systems)"
