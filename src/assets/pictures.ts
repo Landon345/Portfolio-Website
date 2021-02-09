@@ -71,6 +71,10 @@ import OrionOpen from "src/assets/OrionOpen.png";
 import OrionRegister from "src/assets/OrionRegister.png";
 import OrionSteps from "src/assets/OrionSteps.png";
 
+import HouseList from "src/assets/HouseList.png";
+import OneHouse from "src/assets/OneHouse.png";
+import AddHouse from "src/assets/AddHouse.png";
+
 export {
   profilepic,
   tabsystemTabs,
@@ -141,4 +145,7 @@ export {
   OrionRegister,
   OrionSteps,
   Orion,
+  HouseList,
+  OneHouse,
+  AddHouse,
 };

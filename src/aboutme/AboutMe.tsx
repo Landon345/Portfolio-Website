@@ -44,10 +44,24 @@ function AboutMe() {
         <span role="img" aria-label="Guitar">
           🎸
         </span>
-        . My favorite framework right now is React, but I also enjoy Laravel and
-        NodeJs for backend. I have done projects with Angular and Django, and of
-        course, I used SQL or ORM's (object-relational mappers) to communicate
-        with my databases. Basketball
+        . My favorite framework right now is React, and I also enjoy Laravel and
+        NodeJs for backend. In college, I did projects with C# and the .NET
+        framework, Visual Basic, Angular, and Django. On my own, I learned
+        React, NodeJs, NextJs, Laravel, and GraphQL. I am great at learning on
+        my own which is very important for software engineers. On{" "}
+        <a
+          className="paragraphLink"
+          href="https://www.youtube.com/channel/UC4oRFTHw71_CBSHAcCRmV6w"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          my YouTube channel{" "}
+          <span role="img" aria-label="computer">
+            📹
+          </span>
+        </a>
+        , I made tutorials for pretty much all the challenges on FreeCodeCamp.
+        Basketball
         <span role="img" aria-label="basketball">
           🏀
         </span>{" "}
@@ -56,13 +70,20 @@ function AboutMe() {
           👨‍💻
         </span>
         . Thank you for checking out my website and make sure to checkout my{" "}
-        <a className="paragraphLink" href="https://github.com/Landon345">
+        <a
+          className="paragraphLink"
+          href="https://github.com/Landon345"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>{" "}
         and{" "}
         <a
           className="paragraphLink"
           href="https://www.linkedin.com/in/landon-schlangen-a3989a16b/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>{" "}
@@ -133,11 +154,6 @@ function AboutMe() {
               name="Andrew Kirby"
               photo={photos.AndrewKirby}
               link="https://www.youtube.com/channel/UC8JNIm02zw8h_3NBrP_zsZA"
-            />
-            <YouTuber
-              name="Coder's Tape"
-              photo={photos.CodersTape}
-              link="https://www.youtube.com/channel/UCQI-Ym2rLZx52vEoqlPQMdg"
             />
             <YouTuber
               name="Ben Awad"
@@ -256,13 +272,12 @@ function AboutMe() {
         mx="10%"
         lineHeight="35px"
       >
-        I have recently started to youtube a little bit, and I would also love
-        to teach web development to anyone interested! If you are interested in
-        web development, don't hesitate to call or email me. I can do zoom
-        calls, and we can go through anything I have listed on this website. You
-        can find my email and phone number in the footer of the page. I am also
-        happy to take a look at any job offers that come my way. (last updated
-        Oct. 2020)
+        I started a YouTube channel and would also love to teach web development
+        to anyone interested! If you are interested in web development, don't
+        hesitate to call or email me. I can do zoom calls, and we can go through
+        anything I have listed on this website. You can find my email and phone
+        number in the footer of the page. I am also happy to take a look at any
+        job offers that come my way. (last updated Feb. 2021)
       </Box>
       <Box mx="10%" mt="30px">
         <Box color="Paragraph" fontSize="29px">
